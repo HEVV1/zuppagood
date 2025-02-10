@@ -1,13 +1,16 @@
 /* Colors -----------------------------------------------------------------*/
 $color_white:                 #FFFFFF; // White
 $color_black:                 #000000; // Black
-$color_primary:               #a09595; //Primary color
+$primary:                     #DA9F5B; // Primary
+$secondary:                   #33211D; // Secondary
+$transparent_dark:            rgba(51, 33, 29, 0.7);
 /* Fonts ------------------------------------------------------------------*/
 $default_font_family: "Montserrat", sans-serif;
+$font_family_roboto: "Roboto", sans-serif;
 $default_font_size: 1.6rem;
 $default_font_weight: 400;
 $default_line_height: 1.7;
 $default_font_color: $color_black;
 /* Other ------------------------------------------------------------------*/
-$regular_content_width: 114rem + 5.4rem; // content + outside gutter (left and right together)
+$regular_content_width: 114rem + 6rem; // content + outside gutter (left and right together)
 $default_transition_time: 1.5s;

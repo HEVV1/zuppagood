@@ -1,0 +1,22 @@
+.block-header {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  .header__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    .header__wrapper-nav {
+      .header__wrapper-nav-ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
