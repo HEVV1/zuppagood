@@ -1,0 +1,5 @@
+<div class="block-blog-image">
+  <div *ngIf="isThereATopImage" class="blog-image__top-border"></div>
+  <ng-content></ng-content>
+  <div *ngIf="isThereABottomImage" class="blog-image__bottom-border"></div>
+</div>

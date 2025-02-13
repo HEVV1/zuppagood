@@ -8,7 +8,7 @@
     font-size: $default_font_size;
     font-weight: 600;
     letter-spacing: .1rem;
-    transition: all .15s ease;
+    transition: all $default_transition_time ease;
     &:hover {
       color: $primary;
     }
@@ -29,4 +29,86 @@
   font-size: 2.4rem;
   letter-spacing: .5rem;
   font-weight: 500;
+}
+
+.text-slogan {
+  font-family: $font_family_roboto;
+  color: $secondary;
+  text-transform: none;
+  display: inline-block;
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+
+.text-franchise-header {
+  font-family: $font_family_roboto;
+  color: $primary;
+  text-transform: none;
+  display: inline-block;
+  font-size: 7.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-franchise {
+  font-family: $font_family_roboto;
+  color: $color_white;
+  text-transform: none;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.text-carousel-menu-header{
+  font-family: $font_family_houstander;
+  color: $secondary;
+  text-transform: none;
+  display: inline-block;
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+////////////////RESPONSIVENESS////////////////////
+@include res('lg') {
+  .text-franchise-header {
+    font-size: 6.2rem;
+  }
+}
+
+@include res('md') {
+  .text-about {
+    font-size: 2.1rem;
+  }
+
+  .text-slogan {
+    font-size: 4.1rem;
+  }
+
+  .text-franchise-header {
+    font-size: 4.7rem;
+  }
+
+  .text-franchise {
+    font-size: 2rem;
+  }
+}
+
+@include res('sm') {
+  .text-slogan {
+    font-size: 3.2rem;
+  }
+
+  .text-franchise-header {
+    font-size: 4.1rem;
+  }
+
+  .text-franchise-header {
+    font-size: 4rem;
+  }
+
+  .text-franchise {
+    font-size: 1.6rem;
+  }
 }

@@ -82,10 +82,6 @@ input[type='number'] {
   color: $color_white;
 }
 
-.custom-container {
-  @include custom-container();
-}
-
 li {
   list-style: none;
 }

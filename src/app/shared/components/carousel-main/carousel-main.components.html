@@ -2,9 +2,9 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div [class.active]="" class="carousel-item" *ngFor="let item of CarouselImages" #carouselItem>
-        <img src="./assets/images/carousel-main/{{item.name}}" class="d-block w-100" alt="{{item.name}}">
+        <img src="./assets/images/carousel-main/{{item.name}}" class="d-block w-100" alt="{{item.name}}" loading="lazy">
         <div class="carousel-item-logo">
-          <img src="./assets/images/logo.png" alt="logo.png">
+          <img src="./assets/images/logo.png" alt="logo.png" loading="lazy">
         </div>
       </div>
     </div>

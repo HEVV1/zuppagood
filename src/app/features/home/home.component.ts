@@ -6,4 +6,6 @@ import {Component} from "@angular/core";
   styleUrl: "./home.component.scss"
 })
 export class HomeComponent {
+  public thereIsATopBorder: boolean = true;
+  public thereIsABottomBorder: boolean = true;
 }
