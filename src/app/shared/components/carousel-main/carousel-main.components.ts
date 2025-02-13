@@ -14,22 +14,22 @@ export class CarouselMainComponents {
       id: 0,
       name: 'bg-00.jpg',
     },
-    // {
-    //   id: 1,
-    //   name: 'bg-01.jpg',
-    // },
-    // {
-    //   id: 2,
-    //   name: 'bg-02.jpg',
-    // },
-    // {
-    //   id: 3,
-    //   name: 'bg-03.jpg',
-    // },
-    // {
-    //   id: 4,
-    //   name: 'bg-04.jpg',
-    // },
+    {
+      id: 1,
+      name: 'bg-01.jpg',
+    },
+    {
+      id: 2,
+      name: 'bg-02.jpg',
+    },
+    {
+      id: 3,
+      name: 'bg-03.jpg',
+    },
+    {
+      id: 4,
+      name: 'bg-04.jpg',
+    },
   ]
 
   ngAfterViewInit(): void {
