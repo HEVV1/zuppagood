@@ -1,12 +1,16 @@
 @charset "UTF-8";
 // Lib - Bootstrap | Tailwind...
 @import "bootstrap/scss/bootstrap.scss";
+// Carousel Slider
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 // Abstracts - Variables, functions, mixins, and placeholders
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/fonts";
 // Vendors
 @import "vendors/bootstrap-variables-override";
+@import "vendors/carousel-menu-override";
 // Base
 @import "base/base";
 @import "base/typography";

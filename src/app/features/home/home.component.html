@@ -1,7 +1,3 @@
-<section class="section-header">
-  <zpg-header></zpg-header>
-</section>
-
 <section class="section__carousel-main mb-5">
   <zpg-carousel-main></zpg-carousel-main>
 </section>
@@ -9,7 +5,7 @@
 <section class="section__about-us pt-2 pb-2 pb-md-5 pt-md-5">
   <div class="custom-container">
     <div class="wrapper-text text-center pb-0 pb-md-5">
-      <span class="text-about">About Us</span>
+      <span class="t-about--h">About Us</span>
     </div>
     <div class="wrapper-about-us pb-5 pt-5">
       <div class="row">
@@ -44,7 +40,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-9 col-xl-6 text-justify p-0 mt-4 mt-md-0 px-md-4">
-                <span class="about-us-content-text">
+                <span>
                   At Zuppa Good, we prioritize your well-being. Our soups are crafted with natural ingredients, free
                   from preservatives, ensuring every cup is a wholesome and nutritious delight. Trust is our currency,
                   and with every serving, we reinforce our commitment to serve soups worthy of your confidence – "In
@@ -57,21 +53,23 @@
       </div>
     </div>
     <div class="wrapper-text text-center">
-      <span class="text-slogan">Great Taste, No Waste</span>
+      <span class="t-slogan">Great Taste, No Waste</span>
     </div>
   </div>
 </section>
 
 <section class="section__interested-in-franchise">
   <zpg-blog-image
-    [isThereATopImage]="thereIsATopBorder"
-    [isThereABottomImage]="thereIsABottomBorder">
+    [imgUrl]="'zg-4.jpg'"
+    [position]="'top'"
+    [isThereATopImage]="true"
+    [isThereABottomImage]="true">
     <div class="custom-container">
       <div class="wrapper-text text-center py-4 px-md-4">
-        <span class="text-franchise-header">Interested in franchise?</span>
+        <span class="t-franchise--header">Interested in franchise?</span>
       </div>
       <div class="wrapper-text text-center px-md-4">
-        <span class="text-franchise">At Zuppa Good, we've reimagined fast food with a revolutionary concept that guarantees both exceptional taste and environmental responsibility. We are not your average soup joint as we are a dining experience that serves restaurant-level soups in a quick, convenient, and eco-friendly manner.</span>
+        <span class="t-franchise--content">At Zuppa Good, we've reimagined fast food with a revolutionary concept that guarantees both exceptional taste and environmental responsibility. We are not your average soup joint as we are a dining experience that serves restaurant-level soups in a quick, convenient, and eco-friendly manner.</span>
       </div>
       <div class="wrapper-button d-flex justify-content-center mt-5">
         <zpg-button-link
@@ -86,7 +84,7 @@
 <section class="section__menu-carousel">
   <div class="custom-container">
     <div class="wrapper-text text-center py-md-5">
-      <span class="text-carousel-menu-header">In Soup We Trust</span>
+      <span class="t-slider--h">In Soup We Trust</span>
     </div>
     <div class="wrapper-menu-carousel py-5">
       <zpg-carousel-menu>

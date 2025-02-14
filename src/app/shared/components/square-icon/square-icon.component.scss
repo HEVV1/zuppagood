@@ -1,0 +1,27 @@
+@use 'abstracts/variables' as var;
+
+.block-square-icon {
+  .square-icon__wrapper {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4.5rem;
+      height: 4.5rem;
+      border: .2rem solid var.$color_white;
+      transition: ease var.$default_transition_time all;
+      &:hover {
+        border-color: var.$primary;
+        background: var.$color_white;
+        fa-icon {
+          color: var.$primary;
+        }
+      }
+      fa-icon {
+        display: flex;
+        color: var.$color_white;
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -8,8 +8,7 @@
   width: 100%;
   min-height: 40rem;
   padding: 4rem 0;
-  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(/assets/images/zg-4.jpg) no-repeat top;
-  background-size: cover;
+  background-size: cover !important;
   .blog-image__top-border {
     display: block;
     width: 100%;

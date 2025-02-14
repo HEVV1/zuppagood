@@ -8,4 +8,6 @@ import {Component, Input} from "@angular/core";
 export class BlogImageComponent {
   @Input() public isThereATopImage: boolean | undefined;
   @Input() public isThereABottomImage: boolean | undefined;
+  @Input() public imgUrl: string | undefined;
+  @Input() public position: string | undefined;
 }

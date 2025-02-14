@@ -5,5 +5,5 @@ export interface CarouselImage {
 
 export interface CarouselMenuImage {
   id: string,
-  name: string
+  urlSrc: string
 }

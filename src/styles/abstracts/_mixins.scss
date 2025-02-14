@@ -113,4 +113,8 @@ xl: 1200px  --> DESKTOP or where just normal style apply
   padding-right: 3rem;
   margin-left: auto;
   margin-right: auto;
+  @include res('md'){
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

@@ -28,9 +28,10 @@
   }
   &:hover {
     background: $primary_darker;
+    color: $color_white;
   }
   &:focus {
-    //color: var.$color_white;
+    //color: $color_white;
   }
   &:active {
     transform: scale(0.9);
@@ -45,3 +46,31 @@
   }
 }
 
+.t-color {
+  &.white {
+    color: $color_white;
+  }
+  &.primary {
+    color: $primary;
+  }
+}
+
+.t-transform {
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.t-decoration {
+  &.underline {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.t-weight {
+  &.tw-600 {
+    font-weight: 600;
+  }
+}

@@ -1,1 +1,14 @@
-<router-outlet/>
+<div class="app-root-header-content">
+  <section class="section-header">
+    <zpg-header></zpg-header>
+  </section>
+  <router-outlet/>
+</div>
+<section class="section-footer mt-md-5">
+  <zpg-blog-image
+    [imgUrl]="'zg-5.jpg'"
+    [position]="'center'"
+    [isThereATopImage]="true">
+    <zpg-footer class="w-100"></zpg-footer>
+  </zpg-blog-image>
+</section>
