@@ -1,0 +1,7 @@
+@use 'abstracts/variables' as var;
+
+.a-btn:link,
+.a-btn:visited{
+  display: inline-block;
+  text-decoration: none;
+}

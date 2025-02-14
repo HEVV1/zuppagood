@@ -1,0 +1,76 @@
+.custom-container {
+  @include custom-container();
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.block__button {
+  color: $color_darker;
+  position: relative;
+  font-weight: 600;
+  background: $primary;
+  padding: .6rem 2.4rem;
+  transition: ease $default_transition_time all;
+  -webkit-transition-duration: ease $default_transition_time all;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 .1rem 1rem rgba($primary, 0.8);
+  }
+  &:hover {
+    background: $primary_darker;
+    color: $color_white;
+  }
+  &:focus {
+    //color: $color_white;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  &:active:after {
+    box-shadow: 0 0 0 0 rgba($primary, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+}
+
+.t-color {
+  &.white {
+    color: $color_white;
+  }
+  &.primary {
+    color: $primary;
+  }
+}
+
+.t-transform {
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.t-decoration {
+  &.underline {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.t-weight {
+  &.tw-600 {
+    font-weight: 600;
+  }
+}

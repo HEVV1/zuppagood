@@ -1,0 +1,11 @@
+@use 'abstracts/variables' as var;
+
+.block-footer{
+  .footer__bottom{
+    margin-top: 4.8rem;
+    border-top: .1rem solid rgba(var.$color_white, 0.1);
+    .wrapper-text{
+      margin-top: 4rem;
+    }
+  }
+}

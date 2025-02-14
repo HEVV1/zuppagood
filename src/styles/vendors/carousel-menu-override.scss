@@ -1,0 +1,23 @@
+.owl-dots {
+  .owl-dot {
+    zoom: 2 !important;
+    span {
+      background: $primary !important;
+      transition: ease $default_transition_time all !important;
+    }
+    &.active {
+      span {
+        background: $secondary !important;
+        width: 2rem;
+      }
+    }
+  }
+}
+
+@include res('sm') {
+  .owl-dots {
+    .owl-dot {
+      zoom: 1.5 !important;
+    }
+  }
+}

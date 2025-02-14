@@ -1,0 +1,9 @@
+<div class="block-blog-image"
+     [ngStyle]="{'background':
+     'linear-gradient(#33211de6, #33211de6), ' +
+     'url(/assets/images/blog-background-images/'+imgUrl+') ' +
+     'no-repeat ' + position + ''}">
+  <div *ngIf="isThereATopImage" class="blog-image__top-border"></div>
+  <ng-content></ng-content>
+  <div *ngIf="isThereABottomImage" class="blog-image__bottom-border"></div>
+</div>

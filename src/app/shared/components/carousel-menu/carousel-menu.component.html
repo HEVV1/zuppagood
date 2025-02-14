@@ -1,0 +1,15 @@
+<div class="block-carousel-menu">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of carouselContent">
+      <ng-template carouselSlide id="{{slide.id}}">
+        <div class="carousel-menu__wrapper">
+          <img
+            src="assets/images/carousel-menu/{{slide.urlSrc}}"
+            [alt]="slide.urlSrc"
+            [title]="slide.urlSrc"
+            loading="lazy">
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

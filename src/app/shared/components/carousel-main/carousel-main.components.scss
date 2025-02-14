@@ -1,0 +1,44 @@
+@use "abstracts/variables" as var;
+
+.block-carousel-main {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    position: absolute;
+    bottom: -.1rem;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url("/assets/images/overlay-bottom.png");
+  }
+  .carousel-item {
+    max-height: 100vh;
+    vertical-align: middle;
+    .carousel-item-logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var.$transparent_dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 30%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .carousel-control-prev-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
