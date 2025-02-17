@@ -1,0 +1,77 @@
+@use 'abstracts/variables' as var;
+@use 'base/animations' as anime;
+.block-menu-button {
+  width: 5.6rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .1rem solid rgba(var.$color_white, 0.1);
+  cursor: pointer;
+  transition: all var.$default_transition_time ease;
+  .menu-button__label-lines {
+    position: relative;
+    width: 3rem;
+    .menu-button__label-single-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: .1rem;
+      transition: all var.$default_transition_time ease;
+      background: rgba(var.$color_white, 0.4);
+      &.line--1 {
+        top: -1rem;
+      }
+      &.line--2 {
+        transform: scale(1);
+      }
+      &.line--3 {
+        top: 1rem;
+      }
+    }
+
+  }
+  &:hover {
+    border-color: rgba(var.$color_white, 0.8);
+    .menu-button__label-lines {
+      .menu-button__label-single-line {
+        background: rgba(var.$color_white, 0.8);
+      }
+    }
+  }
+
+  &.animation-on {
+    .menu-button__label-lines {
+      .menu-button__label-single-line {
+        &.line--1 {
+          animation: down-rotate 0.6s both;
+        }
+        &.line--2 {
+          transform: scale(0);
+          transform-origin: center;
+        }
+        &.line--3 {
+          animation: up-rotate 0.6s both;
+        }
+      }
+    }
+  }
+
+  &.animation-reverse {
+    .menu-button__label-lines {
+      .menu-button__label-single-line {
+        &.line--1 {
+          animation: down-rotate-reverse 0.6s both;
+        }
+        &.line--2 {
+          transform: scale(1);
+          transform-origin: center;
+        }
+        &.line--3 {
+          animation: up-rotate-reverse 0.6s both;
+        }
+      }
+    }
+  }
+}

@@ -1,20 +1,50 @@
 <div class="block-header">
-  <div class="header__wrapper">
-    <nav class="header__wrapper-nav">
-      <ul class="header__wrapper-nav-ul">
-        <li class="t-menu">
+  <div class="header__desktop-wrapper">
+    <nav class="header__desktop-wrapper-nav">
+      <ul class="header__desktop-wrapper-nav-ul">
+        <li class="t-menu desktop">
           <a href="/home">Home</a>
         </li>
-        <li class="t-menu">
+        <li class="t-menu desktop">
           <a href="/menu">Menu</a>
         </li>
-        <li class="t-menu">
+        <li class="t-menu desktop">
           <a href="/franchise">Franchise</a>
         </li>
-        <li class="t-menu">
+        <li class="t-menu desktop">
           <a href="/contacts">Contacts</a>
         </li>
       </ul>
     </nav>
+  </div>
+
+  <div
+    class="header__mobile-wrapper"
+    [class.animate-menu-links]="menuActive">
+    <div class="header__mobile-button">
+      <zpg-button-menu
+        class="d-flex"
+        (click)="toggleMenu($event)"
+        #menuButtonParent/>
+    </div>
+    <div class="header__mobile-links">
+      <nav class="header__wrapper-nav">
+        <ul class="header__wrapper-nav-ul">
+          <li class="t-menu">
+            <a href="/home">Home</a>
+          </li>
+          <li class="t-menu">
+            <a href="/menu">Menu</a>
+          </li>
+          <li class="t-menu">
+            <a href="/franchise">Franchise</a>
+          </li>
+          <li class="t-menu">
+            <a href="/contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
   </div>
 </div>

@@ -1,4 +1,11 @@
-import {Component} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
+import {ButtonMenuComponent} from "../../../shared/components/button-menu/button-menu.component";
 
 @Component({
   selector: 'zpg-header',
@@ -6,5 +13,20 @@ import {Component} from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  public title = 'header';
+  public menuActive: boolean = false;
+
+  @ViewChild('menuButtonParent')
+  public menuButtonParent!: ButtonMenuComponent;
+
+  public toggleMenu(event: Event) {
+    this.menuActive = !this.menuActive;
+    const childElement = this.menuButtonParent.getDOMElement()
+    if (this.menuActive) {
+      childElement.nativeElement.classList.add('animation-on');
+      childElement.nativeElement.classList.remove('animation-reverse');
+    } else {
+      childElement.nativeElement.classList.remove('animation-on');
+      childElement.nativeElement.classList.add('animation-reverse');
+    }
+  }
 }

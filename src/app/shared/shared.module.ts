@@ -12,6 +12,7 @@ import {CarouselMainComponents} from "./components/carousel-main/carousel-main.c
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {SquareIconComponent} from "./components/square-icon/square-icon.component";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
+import {ButtonMenuComponent} from "./components/button-menu/button-menu.component";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {FaIconComponent} from "@fortawesome/angular-fontawesome";
     ButtonLinkComponent,
     CarouselMenuComponent,
     CarouselMainComponents,
-    SquareIconComponent
+    SquareIconComponent,
+    ButtonMenuComponent
   ],
   imports: [
     NgOptimizedImage,
@@ -38,7 +40,8 @@ import {FaIconComponent} from "@fortawesome/angular-fontawesome";
     ButtonLinkComponent,
     CarouselMenuComponent,
     CarouselMainComponents,
-    SquareIconComponent
+    SquareIconComponent,
+    ButtonMenuComponent
   ],
 })
 

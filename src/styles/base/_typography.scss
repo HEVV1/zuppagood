@@ -13,11 +13,14 @@
       color: $primary;
     }
   }
-  &:first-child {
-    padding-left: 1.5rem;
-  }
-  &:last-child {
-    padding-right: 1.5rem;
+
+  &.desktop {
+    &:first-child {
+      padding-left: 1.5rem;
+    }
+    &:last-child {
+      padding-right: 1.5rem;
+    }
   }
 }
 
