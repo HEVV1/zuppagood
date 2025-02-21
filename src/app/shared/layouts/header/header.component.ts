@@ -5,7 +5,7 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
-import {ButtonMenuComponent} from "../../../shared/components/button-menu/button-menu.component";
+import {ButtonMenuComponent} from "../../components/button-menu/button-menu.component";
 
 @Component({
   selector: 'zpg-header',
@@ -14,6 +14,7 @@ import {ButtonMenuComponent} from "../../../shared/components/button-menu/button
 })
 export class HeaderComponent {
   public menuActive: boolean = false;
+  public compsAnimationLogic: Array<boolean> = [];
 
   @ViewChild('menuButtonParent')
   public menuButtonParent!: ButtonMenuComponent;
@@ -28,5 +29,9 @@ export class HeaderComponent {
       childElement.nativeElement.classList.remove('animation-on');
       childElement.nativeElement.classList.add('animation-reverse');
     }
+  }
+
+  public isIntersecting (status: boolean, index: number) {
+    this.compsAnimationLogic[index] = status;
   }
 }

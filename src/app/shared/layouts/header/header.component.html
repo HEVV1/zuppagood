@@ -1,26 +1,46 @@
 <div class="block-header">
   <div class="header__desktop-wrapper">
     <nav class="header__desktop-wrapper-nav">
-      <ul class="header__desktop-wrapper-nav-ul">
+      <ul class="header__desktop-wrapper-nav-ul"
+          appInView
+          #intersection="intersection"
+          [class.header__desktop-wrapper-nav-ul-animate]="compsAnimationLogic[8]"
+          (isIntersecting)="isIntersecting($event, 8)"
+          [isContinuous]="false">
         <li class="t-menu desktop">
-          <a href="/home">Home</a>
+          <span>
+            <a href="/home">
+              Home
+            </a>
+          </span>
         </li>
         <li class="t-menu desktop">
-          <a href="/menu">Menu</a>
+          <span>
+            <a href="/menu">
+              Menu
+            </a>
+          </span>
         </li>
         <li class="t-menu desktop">
-          <a href="/franchise">Franchise</a>
+          <span>
+            <a href="/franchise">
+              Franchise
+            </a>
+          </span>
         </li>
         <li class="t-menu desktop">
-          <a href="/contacts">Contacts</a>
+          <span>
+            <a href="/contacts">
+              Contacts
+            </a>
+          </span>
         </li>
       </ul>
     </nav>
   </div>
 
-  <div
-    class="header__mobile-wrapper"
-    [class.animate-menu-links]="menuActive">
+  <div class="header__mobile-wrapper"
+       [class.animate-menu-links]="menuActive">
     <div class="header__mobile-button">
       <zpg-button-menu
         class="d-flex"

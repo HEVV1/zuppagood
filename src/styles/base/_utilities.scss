@@ -88,3 +88,29 @@
     font-weight: 600;
   }
 }
+
+// Animation on scroll - initial value
+.text-animation-initial-value {
+  &.wrapper-text {
+    overflow: hidden;
+    span {
+      transition: all calc($default_transition_time * 6) ease;
+      transform: translateY(100%);
+    }
+  }
+}
+.component-animation-initial-value {
+  transition: all calc($default_transition_time * 6) ease;
+  transform: translateY(3rem);
+  opacity: 0;
+}
+.component-animation-initial-value-opacity {
+  transition: all calc($default_transition_time * 6) ease;
+  opacity: 0;
+}
+
+// Animation on scroll
+.components-animate-on-scroll {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}

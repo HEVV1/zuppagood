@@ -1,5 +1,4 @@
 import {
-  AfterViewInit,
   Component,
   ElementRef,
   ViewChild
@@ -10,15 +9,10 @@ import {
   templateUrl: './button-menu.component.html',
   styleUrl: './button-menu.component.scss'
 })
-export class ButtonMenuComponent implements AfterViewInit {
+export class ButtonMenuComponent {
   @ViewChild('menuButton') public menuButton!: ElementRef;
 
   constructor() {
-
-  }
-
-  ngAfterViewInit(): void {
-    console.log(this.menuButton)
   }
 
   public getDOMElement(): ElementRef {

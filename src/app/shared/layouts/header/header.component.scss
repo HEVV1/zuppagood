@@ -22,6 +22,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        li {
+          span {
+            transition: all $default_transition_time * 3 ease;
+            opacity: 0;
+          }
+        }
+        @for $i from 1 through 4 {
+          li:nth-child(#{$i}) {
+            span {
+              transition-delay: 0s + $i * .1s;
+            }
+          }
+        }
+        &.header__desktop-wrapper-nav-ul-animate {
+          li {
+            span {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }

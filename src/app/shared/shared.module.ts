@@ -1,19 +1,26 @@
 import {NgModule} from "@angular/core";
 import {
+  NgClass,
   NgForOf,
   NgIf,
   NgOptimizedImage, NgStyle
 } from "@angular/common";
+import {CarouselModule} from "ngx-owl-carousel-o";
+import {FaIconComponent} from "@fortawesome/angular-fontawesome";
+// Components
 import {BlogImageComponent} from "./components/blog-image/blog-image.component";
 import {ButtonComponent} from "./components/button/button.component";
 import {ButtonLinkComponent} from "./components/button-link/button-link.component";
 import {CarouselMenuComponent} from "./components/carousel-menu/carousel-menu.component";
 import {CarouselMainComponents} from "./components/carousel-main/carousel-main.components";
-import {CarouselModule} from "ngx-owl-carousel-o";
 import {SquareIconComponent} from "./components/square-icon/square-icon.component";
-import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {ButtonMenuComponent} from "./components/button-menu/button-menu.component";
-
+// Layouts
+import {HeaderComponent} from "./layouts/header/header.component";
+import {FooterComponent} from "./layouts/footer/footer.component";
+import {InViewDirective} from "./directives/in-view.directive";
+import { FloatingLinkComponent } from './components/floating-link/floating-link.component';
+import { FadeInOutDirective } from './directives/fade-in-out.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,12 @@ import {ButtonMenuComponent} from "./components/button-menu/button-menu.componen
     CarouselMenuComponent,
     CarouselMainComponents,
     SquareIconComponent,
-    ButtonMenuComponent
+    ButtonMenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    InViewDirective,
+    FloatingLinkComponent,
+    FadeInOutDirective,
   ],
   imports: [
     NgOptimizedImage,
@@ -32,6 +44,7 @@ import {ButtonMenuComponent} from "./components/button-menu/button-menu.componen
     CarouselModule,
     NgStyle,
     FaIconComponent,
+    NgClass,
   ],
   providers: [],
   exports: [
@@ -41,7 +54,12 @@ import {ButtonMenuComponent} from "./components/button-menu/button-menu.componen
     CarouselMenuComponent,
     CarouselMainComponents,
     SquareIconComponent,
-    ButtonMenuComponent
+    ButtonMenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    InViewDirective,
+    FloatingLinkComponent,
+    FadeInOutDirective
   ],
 })
 

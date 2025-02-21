@@ -8,7 +8,8 @@
     font-size: $default_font_size;
     font-weight: 600;
     letter-spacing: .1rem;
-    transition: all $default_transition_time ease;
+    transition: all $default_transition_time ease !important;
+    text-shadow: .1rem .1rem .1rem $color_black;
     &:hover {
       color: $primary;
     }
