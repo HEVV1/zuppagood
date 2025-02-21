@@ -6,46 +6,57 @@
   text-align: justify;
 }
 
-.block__button {
-  color: $color_darker;
+.block__button--primary {
+  color: $primary;
   position: relative;
-  font-weight: 600;
-  background: $primary;
-  padding: .6rem 2.4rem;
-  transition: ease $default_transition_time all;
-  -webkit-transition-duration: ease $default_transition_time all;
+  font-weight: 500;
+  padding: 1.6rem 4.8rem;
+  transition: ease $default_transition_time * 3 all;
+  border: .1rem solid $primary;
+  background-image: linear-gradient(130deg, transparent 0%, transparent 50%, $primary 50%);
+  background-size: 240%;
+  &::before,
   &::after {
     content: "";
-    display: block;
     position: absolute;
-    left: 0;
     top: 0;
-    width: 100%;
+    left: 0;
+    border-color: rgba($color_white, 1);
+    border-style: solid;
+    transition: all ($default_transition_time * 3) ease;
+    z-index: 1;
+  }
+  &::before {
+    width: 0;
     height: 100%;
-    opacity: 0;
-    transition: all 0.5s;
-    box-shadow: 0 0 .1rem 1rem rgba($primary, 0.8);
+    border-width: .1rem 0 .1rem 0;
   }
-  &:hover {
-    background: $primary_darker;
+  &::after {
+    width: 100%;
+    height: 0;
+    border-width: 0 .1rem 0 .1rem;
+  }
+  &:hover,
+  &:active {
     color: $color_white;
-  }
-  &:focus {
-    //color: $color_white;
+    background-position: 100%;
+    border-color: rgba($color_white, 1);
+    &::before {
+      width: 100%;
+      border-width: .1rem 0 .1rem 0;
+    }
+    &::after {
+      height: 100%;
+      border-width: 0 .1rem 0 .1rem;
+    }
   }
   &:active {
     transform: scale(0.9);
-  }
-  &:active:after {
-    box-shadow: 0 0 0 0 rgba($primary, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 1;
-    transition: 0s;
+    transition: ease $default_transition_time all !important;
   }
 }
 
+// TEXT
 .t-color {
   &.white {
     color: $color_white;
@@ -73,4 +84,33 @@
   &.tw-600 {
     font-weight: 600;
   }
+  &.tw-700 {
+    font-weight: 600;
+  }
+}
+
+// Animation on scroll - initial value
+.text-animation-initial-value {
+  &.wrapper-text {
+    overflow: hidden;
+    span {
+      transition: all calc($default_transition_time * 6) ease;
+      transform: translateY(100%);
+    }
+  }
+}
+.component-animation-initial-value {
+  transition: all calc($default_transition_time * 6) ease;
+  transform: translateY(3rem);
+  opacity: 0;
+}
+.component-animation-initial-value-opacity {
+  transition: all calc($default_transition_time * 6) ease;
+  opacity: 0;
+}
+
+// Animation on scroll
+.components-animate-on-scroll {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
 }

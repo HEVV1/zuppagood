@@ -8,16 +8,20 @@
     font-size: $default_font_size;
     font-weight: 600;
     letter-spacing: .1rem;
-    transition: all $default_transition_time ease;
+    transition: all $default_transition_time ease !important;
+    text-shadow: .1rem .1rem .1rem $color_black;
     &:hover {
       color: $primary;
     }
   }
-  &:first-child {
-    padding-left: 1.5rem;
-  }
-  &:last-child {
-    padding-right: 1.5rem;
+
+  &.desktop {
+    &:first-child {
+      padding-left: 1.5rem;
+    }
+    &:last-child {
+      padding-right: 1.5rem;
+    }
   }
 }
 

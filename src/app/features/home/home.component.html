@@ -4,11 +4,23 @@
 
 <section class="section__about-us pt-2 pb-2 pb-md-5 pt-md-5">
   <div class="custom-container">
-    <div class="wrapper-text text-center pb-0 pb-md-5">
-      <span class="t-about--h">About Us</span>
+    <div class="wrapper-text text-center mb-0 mb-md-5 text-animation-initial-value">
+      <span class="t-about--h"
+            appInView
+            #intersection="intersection"
+            [class.components-animate-on-scroll]="compsAnimationLogic[0]"
+            (isIntersecting)="isIntersecting($event, 0)"
+            [isContinuous]="false">
+        About Us
+      </span>
     </div>
     <div class="wrapper-about-us pb-5 pt-5">
-      <div class="row">
+      <div class="row component-animation-initial-value"
+           appInView
+           #intersection="intersection"
+           [class.components-animate-on-scroll]="compsAnimationLogic[1]"
+           (isIntersecting)="isIntersecting($event, 1)"
+           [isContinuous]="false">
         <div class="col-12 col-xl-6 mb-5 mb-xl-0">
           <div class="about-us-content d-flex">
             <div class="row">
@@ -52,8 +64,15 @@
         </div>
       </div>
     </div>
-    <div class="wrapper-text text-center">
-      <span class="t-slogan">Great Taste, No Waste</span>
+    <div class="wrapper-text text-center text-animation-initial-value">
+      <span class="t-slogan"
+            appInView
+            #intersection="intersection"
+            [class.components-animate-on-scroll]="compsAnimationLogic[2]"
+            (isIntersecting)="isIntersecting($event, 2)"
+            [isContinuous]="false">
+        Great Taste, No Waste
+      </span>
     </div>
   </div>
 </section>
@@ -65,14 +84,30 @@
     [isThereATopImage]="true"
     [isThereABottomImage]="true">
     <div class="custom-container">
-      <div class="wrapper-text text-center py-4 px-md-4">
-        <span class="t-franchise--header">Interested in franchise?</span>
+      <div class="wrapper-text text-center py-4 px-md-4 text-animation-initial-value">
+        <span class="t-franchise--header"
+              appInView
+              #intersection="intersection"
+              [class.components-animate-on-scroll]="compsAnimationLogic[3]"
+              (isIntersecting)="isIntersecting($event, 3)"
+              [isContinuous]="false">Interested in franchise?</span>
       </div>
-      <div class="wrapper-text text-center px-md-4">
-        <span class="t-franchise--content">At Zuppa Good, we've reimagined fast food with a revolutionary concept that guarantees both exceptional taste and environmental responsibility. We are not your average soup joint as we are a dining experience that serves restaurant-level soups in a quick, convenient, and eco-friendly manner.</span>
+      <div class="wrapper-text text-center px-md-4 text-animation-initial-value">
+        <span class="t-franchise--content"
+              appInView
+              #intersection="intersection"
+              [class.components-animate-on-scroll]="compsAnimationLogic[4]"
+              (isIntersecting)="isIntersecting($event, 4)"
+              [isContinuous]="false">At Zuppa Good, we've reimagined fast food with a revolutionary concept that guarantees both exceptional taste and environmental responsibility. We are not your average soup joint as we are a dining experience that serves restaurant-level soups in a quick, convenient, and eco-friendly manner.</span>
       </div>
       <div class="wrapper-button d-flex justify-content-center mt-5">
         <zpg-button-link
+          class="component-animation-initial-value"
+          appInView
+          #intersection="intersection"
+          [class.components-animate-on-scroll]="compsAnimationLogic[5]"
+          (isIntersecting)="isIntersecting($event, 5)"
+          [isContinuous]="false"
           [url]="'/menu'">
           E-mail Us
         </zpg-button-link>
@@ -83,11 +118,24 @@
 
 <section class="section__menu-carousel">
   <div class="custom-container">
-    <div class="wrapper-text text-center py-md-5">
-      <span class="t-slider--h">In Soup We Trust</span>
+    <div class="wrapper-text text-center py-md-5 text-animation-initial-value">
+      <span class="t-slider--h"
+            appInView
+            #intersection="intersection"
+            [class.components-animate-on-scroll]="compsAnimationLogic[6]"
+            (isIntersecting)="isIntersecting($event, 6)"
+            [isContinuous]="false">
+        In Soup We Trust
+      </span>
     </div>
     <div class="wrapper-menu-carousel py-5">
-      <zpg-carousel-menu>
+      <zpg-carousel-menu
+        class="component-animation-initial-value-opacity"
+        appInView
+        #intersection="intersection"
+        [class.components-animate-on-scroll]="compsAnimationLogic[7]"
+        (isIntersecting)="isIntersecting($event, 7)"
+        [isContinuous]="false">
       </zpg-carousel-menu>
     </div>
   </div>

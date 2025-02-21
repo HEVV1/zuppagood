@@ -1,0 +1,70 @@
+<div class="block-header">
+  <div class="header__desktop-wrapper">
+    <nav class="header__desktop-wrapper-nav">
+      <ul class="header__desktop-wrapper-nav-ul"
+          appInView
+          #intersection="intersection"
+          [class.header__desktop-wrapper-nav-ul-animate]="compsAnimationLogic[8]"
+          (isIntersecting)="isIntersecting($event, 8)"
+          [isContinuous]="false">
+        <li class="t-menu desktop">
+          <span>
+            <a href="/home">
+              Home
+            </a>
+          </span>
+        </li>
+        <li class="t-menu desktop">
+          <span>
+            <a href="/menu">
+              Menu
+            </a>
+          </span>
+        </li>
+        <li class="t-menu desktop">
+          <span>
+            <a href="/franchise">
+              Franchise
+            </a>
+          </span>
+        </li>
+        <li class="t-menu desktop">
+          <span>
+            <a href="/contacts">
+              Contacts
+            </a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header__mobile-wrapper"
+       [class.animate-menu-links]="menuActive">
+    <div class="header__mobile-button">
+      <zpg-button-menu
+        class="d-flex"
+        (click)="toggleMenu($event)"
+        #menuButtonParent/>
+    </div>
+    <div class="header__mobile-links">
+      <nav class="header__wrapper-nav">
+        <ul class="header__wrapper-nav-ul">
+          <li class="t-menu">
+            <a href="/home">Home</a>
+          </li>
+          <li class="t-menu">
+            <a href="/menu">Menu</a>
+          </li>
+          <li class="t-menu">
+            <a href="/franchise">Franchise</a>
+          </li>
+          <li class="t-menu">
+            <a href="/contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</div>

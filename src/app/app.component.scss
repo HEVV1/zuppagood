@@ -1,0 +1,35 @@
+@import 'abstracts/variables';
+@import 'vendors/bootstrap-variables-override';
+@import 'abstracts/mixins';
+
+.floating-links-wrapper {
+  display: flex;
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  transition: all $default_transition_time * 3 ease;
+  animation: topAndBottom $default_transition_time * 7 infinite alternate;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  &.comp-fade-in {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes topAndBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1.5rem);
+  }
+}
+
+// RESPONSIVENESS
+@include res('md') {
+  .floating-links-wrapper {
+    display: none;
+  }
+}
