@@ -21,6 +21,7 @@ import {FooterComponent} from "./layouts/footer/footer.component";
 import {InViewDirective} from "./directives/in-view.directive";
 import { FloatingLinkComponent } from './components/floating-link/floating-link.component';
 import { FadeInOutDirective } from './directives/fade-in-out.directive';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FadeInOutDirective } from './directives/fade-in-out.directive';
     InViewDirective,
     FloatingLinkComponent,
     FadeInOutDirective,
+    WelcomeComponent,
   ],
   imports: [
     NgOptimizedImage,
@@ -47,20 +49,21 @@ import { FadeInOutDirective } from './directives/fade-in-out.directive';
     NgClass,
   ],
   providers: [],
-  exports: [
-    BlogImageComponent,
-    ButtonComponent,
-    ButtonLinkComponent,
-    CarouselMenuComponent,
-    CarouselMainComponents,
-    SquareIconComponent,
-    ButtonMenuComponent,
-    HeaderComponent,
-    FooterComponent,
-    InViewDirective,
-    FloatingLinkComponent,
-    FadeInOutDirective
-  ],
+    exports: [
+        BlogImageComponent,
+        ButtonComponent,
+        ButtonLinkComponent,
+        CarouselMenuComponent,
+        CarouselMainComponents,
+        SquareIconComponent,
+        ButtonMenuComponent,
+        HeaderComponent,
+        FooterComponent,
+        InViewDirective,
+        FloatingLinkComponent,
+        FadeInOutDirective,
+        WelcomeComponent
+    ],
 })
 
 export class SharedModule {

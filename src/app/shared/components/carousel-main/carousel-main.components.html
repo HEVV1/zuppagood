@@ -4,7 +4,7 @@
       <div class="carousel-item" *ngFor="let item of CarouselImages" #carouselItem>
         <img src="./assets/images/carousel-main/{{item.name}}" class="d-block w-100" alt="{{item.name}}" loading="lazy">
         <div class="carousel-item-logo">
-          <img src="./assets/images/logo.png" alt="logo.png" loading="lazy">
+          <img src="./assets/images/logo.png" alt="logo.png" loading="lazy" #targetLogo>
         </div>
       </div>
     </div>

@@ -6,7 +6,8 @@
           #intersection="intersection"
           [class.header__desktop-wrapper-nav-ul-animate]="compsAnimationLogic[8]"
           (isIntersecting)="isIntersecting($event, 8)"
-          [isContinuous]="false">
+          [isContinuous]="false"
+          [debounceTime]="2150">
         <li class="t-menu desktop">
           <span>
             <a href="/home">

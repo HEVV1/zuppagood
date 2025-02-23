@@ -30,7 +30,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
   // means that the threshold isn't considered passed until every pixel is visible
   @Input() threshold = 0;
   // debounceTime - Delays result when the user stopped scrolling
-  @Input() debounceTime = 50;
+  @Input() debounceTime = 0;
   // isContinuous - Should it be triggered only once or constantly
   @Input() isContinuous = false;
 
