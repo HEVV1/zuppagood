@@ -1,5 +1,10 @@
 import {Component} from '@angular/core';
-import {faFacebook, faGoogle, faInstagram, faTripadvisor} from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faGoogle,
+  faInstagram,
+  faTripadvisor
+} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'zpg-app-root',
@@ -11,4 +16,7 @@ export class AppComponent {
   protected readonly faFacebook = faFacebook;
   protected readonly faGoogle = faGoogle;
   protected readonly faTripadvisor = faTripadvisor;
+
+  constructor() {
+  }
 }

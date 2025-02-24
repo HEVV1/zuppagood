@@ -1,0 +1,66 @@
+@use 'abstracts/variables' as var;
+
+.block-welcome {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .welcome__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .welcome__wrapper-half {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      position: absolute;
+      background: var.$primary;
+      width: 100%;
+      min-height: 50vh;
+      opacity: 0;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        bottom: 0;
+      }
+      &.half-top-animate {
+        transition: all 1.3s ease;
+        transform: translateX(-100%);
+      }
+      &.half-bottom-animate {
+        transition: all 1.3s ease;
+        transform: translateX(100%);
+      }
+      .wrapper-text {
+        overflow: hidden;
+        margin-bottom: 5rem;
+        span {
+          transform: translateY(100%);
+          transition: all 1s ease;
+        }
+        &.show-text {
+          span {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    .welcome-wrapper-logo {
+      position: fixed;
+      //transform: translateY(-50%);
+      //transform: scale(0.9);
+      opacity: 0;
+      &.showOnStart {
+        opacity: 1;
+        transform: scale(1.5);
+        transition: width 1s ease, height 1s ease, opacity 2s ease, transform 1s ease;
+      }
+    }
+  }
+}

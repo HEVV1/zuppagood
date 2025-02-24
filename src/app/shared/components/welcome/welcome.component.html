@@ -1,0 +1,29 @@
+<div class="block-welcome"
+     [class.d-none]="isAnimationOff"
+     #targetWelcome>
+  <div class="welcome__wrapper">
+    <div class="welcome__wrapper-half" #targetWelcomeHalfTop></div>
+    <div class="welcome__wrapper-half" #targetWelcomeHalfBottom>
+      <div class="wrapper-text text-center" #targetWelcomeText>
+          <span class="t-franchise--header t-color white">
+            Welcome to <span class="t-color secondary">Zuppa Good</span>
+          </span>
+      </div>
+    </div>
+    <div class="welcome-wrapper-logo"
+         [ngStyle]="{
+                     'width': elDimParameters?.width + 'px',
+                     'top': elDimParameters?.top + 'px',
+                     'left': elDimParameters?.left + 'px',
+                     'transform': isItFadingOut ? 'scale(1)' : ''
+                    }"
+         #targetWelcomeLogo>
+      <img src="assets/images/logo.png" alt="logo.png">
+    </div>
+  </div>
+</div>
+
+<!--'position': isItFadingOut ? 'fixed' : 'absolute',-->
+<!--'transform': isItFadingOut ? 'translateY(0) translateX(0)' : ''-->
+<!--'top': isItFadingOut ? elDimParameters?.top + 'px' : '',-->
+<!--'left': isItFadingOut ? elDimParameters?.left + 'px' : '',-->

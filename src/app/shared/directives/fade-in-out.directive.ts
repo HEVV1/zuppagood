@@ -2,7 +2,8 @@ import {
   AfterViewInit,
   Directive,
   ElementRef,
-  HostListener, Renderer2
+  HostListener,
+  Renderer2
 } from '@angular/core';
 
 @Directive({
@@ -18,13 +19,11 @@ export class FadeInOutDirective implements AfterViewInit {
 
   public ngAfterViewInit(): void {
     this.elementPosY = this.element.nativeElement.getBoundingClientRect().top - window.scrollY;
-    console.log(this.elementPosY)
   }
 
   @HostListener('window:scroll', [])
   public onWindowScroll(): void {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
     if (scrollPosition > 100) {
       if (!this.fadeIn) {
         this.render.addClass(this.element.nativeElement, 'comp-fade-in')

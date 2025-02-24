@@ -5,6 +5,8 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
+import {timer} from "rxjs";
+import {CookieService} from "ngx-cookie-service";
 import {ButtonMenuComponent} from "../../components/button-menu/button-menu.component";
 
 @Component({
@@ -12,12 +14,25 @@ import {ButtonMenuComponent} from "../../components/button-menu/button-menu.comp
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
   public menuActive: boolean = false;
-  public compsAnimationLogic: Array<boolean> = [];
+  public timingMs: number = 3100;
 
-  @ViewChild('menuButtonParent')
-  public menuButtonParent!: ButtonMenuComponent;
+  @ViewChild('menuButtonParent') public menuButtonParent!: ButtonMenuComponent;
+  @ViewChild('targetHeaderNav') public targetHeaderNav!: ElementRef;
+
+  constructor(private renderer2: Renderer2,
+              private cookieService: CookieService) {
+    this.timingMs = this.cookieService.get('hasBeenVisited') ? 0 : 3100;
+  }
+
+  public ngAfterViewInit() {
+    requestAnimationFrame(() => {
+      timer(this.timingMs).subscribe(() => {
+        this.renderer2.addClass(this.targetHeaderNav.nativeElement, 'header__desktop-wrapper-nav-ul-animate');
+      })
+    })
+  }
 
   public toggleMenu(event: Event) {
     this.menuActive = !this.menuActive;
@@ -29,9 +44,5 @@ export class HeaderComponent {
       childElement.nativeElement.classList.remove('animation-on');
       childElement.nativeElement.classList.add('animation-reverse');
     }
-  }
-
-  public isIntersecting (status: boolean, index: number) {
-    this.compsAnimationLogic[index] = status;
   }
 }

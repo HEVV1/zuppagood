@@ -5,6 +5,7 @@ import {
 } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {CookieService} from "ngx-cookie-service";
 // Components
 import {AppComponent} from './app.component';
 // Modules
@@ -25,7 +26,8 @@ import {SharedModule} from "./shared/shared.module";
     FontAwesomeModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    CookieService
   ],
   exports: [],
   bootstrap: [AppComponent]
