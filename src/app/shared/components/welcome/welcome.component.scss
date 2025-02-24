@@ -15,11 +15,14 @@
     align-items: center;
     height: 100%;
     .welcome__wrapper-half {
+      display: flex;
+      justify-content: center;
+      align-items: end;
       position: absolute;
       background: var.$primary;
       width: 100%;
       min-height: 50vh;
-      transition: all 1.3s ease;
+      opacity: 0;
       &:nth-child(1) {
         top: 0;
       }
@@ -27,10 +30,25 @@
         bottom: 0;
       }
       &.half-top-animate {
+        transition: all 1.3s ease;
         transform: translateX(-100%);
       }
       &.half-bottom-animate {
+        transition: all 1.3s ease;
         transform: translateX(100%);
+      }
+      .wrapper-text {
+        overflow: hidden;
+        margin-bottom: 5rem;
+        span {
+          transform: translateY(100%);
+          transition: all 1s ease;
+        }
+        &.show-text {
+          span {
+            transform: translateY(0);
+          }
+        }
       }
     }
     .welcome-wrapper-logo {

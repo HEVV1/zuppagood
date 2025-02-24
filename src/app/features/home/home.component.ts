@@ -6,10 +6,4 @@ import {Component} from "@angular/core";
   styleUrl: "./home.component.scss"
 })
 export class HomeComponent {
-  public compsAnimationLogic: Array<boolean> = [];
-
-  public isIntersecting (status: boolean, index: number) {
-    this.compsAnimationLogic[index] = status;
-    console.log('Element #' + index + ' is intersecting ' + status)
-  }
 }

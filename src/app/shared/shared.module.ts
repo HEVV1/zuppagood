@@ -18,10 +18,11 @@ import {ButtonMenuComponent} from "./components/button-menu/button-menu.componen
 // Layouts
 import {HeaderComponent} from "./layouts/header/header.component";
 import {FooterComponent} from "./layouts/footer/footer.component";
-import {InViewDirective} from "./directives/in-view.directive";
-import { FloatingLinkComponent } from './components/floating-link/floating-link.component';
-import { FadeInOutDirective } from './directives/fade-in-out.directive';
-import { WelcomeComponent } from './components/welcome/welcome.component';
+import {FloatingLinkComponent} from './components/floating-link/floating-link.component';
+import {WelcomeComponent} from './components/welcome/welcome.component';
+// Directive
+import {FadeInOutDirective} from './directives/fade-in-out.directive';
+import {PopupDirective} from './directives/popup.directive';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     ButtonMenuComponent,
     HeaderComponent,
     FooterComponent,
-    InViewDirective,
     FloatingLinkComponent,
     FadeInOutDirective,
     WelcomeComponent,
+    PopupDirective,
   ],
   imports: [
     NgOptimizedImage,
@@ -49,21 +50,21 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     NgClass,
   ],
   providers: [],
-    exports: [
-        BlogImageComponent,
-        ButtonComponent,
-        ButtonLinkComponent,
-        CarouselMenuComponent,
-        CarouselMainComponents,
-        SquareIconComponent,
-        ButtonMenuComponent,
-        HeaderComponent,
-        FooterComponent,
-        InViewDirective,
-        FloatingLinkComponent,
-        FadeInOutDirective,
-        WelcomeComponent
-    ],
+  exports: [
+    BlogImageComponent,
+    ButtonComponent,
+    ButtonLinkComponent,
+    CarouselMenuComponent,
+    CarouselMainComponents,
+    SquareIconComponent,
+    ButtonMenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    FloatingLinkComponent,
+    FadeInOutDirective,
+    WelcomeComponent,
+    PopupDirective
+  ],
 })
 
 export class SharedModule {

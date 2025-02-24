@@ -7,12 +7,13 @@ import {
   ViewChild,
   ViewChildren
 } from '@angular/core';
+import {timer} from "rxjs";
+import {CookieService} from "ngx-cookie-service";
 // Interfaces
 import {CarouselImage} from "../../interfaces/carousel-image.interface";
 // Services
 import {ElementDimensionService} from "../../services/element-dimension.service";
 import {ElementDimensionParamsInterface} from "../../interfaces/element-dimension-params.interface";
-import {timer} from "rxjs";
 
 @Component({
   selector: 'zpg-carousel-main',
@@ -45,28 +46,34 @@ export class CarouselMainComponents implements AfterViewInit {
       name: 'bg-04.jpg',
     },
   ]
+  public timingMs: number = 3100;
+  public readonly _isAnimationOff: string | null = null;
 
   constructor(private renderer2: Renderer2,
-              private elDimensionService: ElementDimensionService) {
+              private elDimensionService: ElementDimensionService,
+              private cookieService: CookieService) {
+    this._isAnimationOff = this.cookieService.get('hasBeenVisited');
   }
 
   public ngAfterViewInit(): void {
-    const elementsArray = this.carouselItems.toArray()
+    const elementsArray = this.carouselItems.toArray();
     elementsArray[0].nativeElement.classList.add('active');
-    this.renderer2.addClass(this.targetLogo.nativeElement, 'opacity-off')
-    requestAnimationFrame(() => {
 
-      const rect = this.targetLogo.nativeElement.getBoundingClientRect();
-      const dimensions: ElementDimensionParamsInterface = {
-        width: rect.width,
-        height: rect.height,
-        top: rect.top,
-        left: rect.left,
-      }
-      this.elDimensionService.setDimensions(dimensions)
-      timer(3000).subscribe(() => {
-        this.renderer2.addClass(this.targetLogo.nativeElement, 'opacity-on')
-      });
-    })
+    if (!this._isAnimationOff) {
+      requestAnimationFrame(() => {
+        this.renderer2.addClass(this.targetLogo.nativeElement, 'opacity-off');
+        const rect = this.targetLogo.nativeElement.getBoundingClientRect();
+        const dimensions: ElementDimensionParamsInterface = {
+          width: rect.width,
+          height: rect.height,
+          top: rect.top,
+          left: rect.left,
+        };
+        this.elDimensionService.setDimensions(dimensions);
+        timer(this.timingMs).subscribe(() => {
+          this.renderer2.addClass(this.targetLogo.nativeElement, 'opacity-on');
+        });
+      })
+    }
   }
 }

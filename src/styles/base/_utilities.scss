@@ -64,6 +64,9 @@
   &.primary {
     color: $primary;
   }
+  &.secondary {
+    color: $secondary;
+  }
 }
 
 .t-transform {
@@ -103,18 +106,18 @@
   &.wrapper-text {
     overflow: hidden;
     span {
-      transition: all 3s ease;
+      transition: all 1s ease;
       opacity: 0;
     }
   }
 }
 .component-animation-initial-value {
-  transition: all calc($default_transition_time * 9) ease;
+  transition: all 1s ease;
   transform: translateY(3rem);
   opacity: 0;
 }
 .component-animation-initial-value-opacity {
-  transition: all calc($default_transition_time * 9) ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 
@@ -124,15 +127,11 @@
   opacity: 1 !important;
 }
 
-.components-animate-on-scroll-opacity {
-  opacity: 1 !important;
-}
-
 // Opacity
 .opacity-off {
-  opacity: 0;
+  opacity: 0 !important;
 }
 .opacity-on {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
