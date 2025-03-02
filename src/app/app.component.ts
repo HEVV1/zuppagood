@@ -5,6 +5,7 @@ import {
   faInstagram,
   faTripadvisor
 } from "@fortawesome/free-brands-svg-icons";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'zpg-app-root',
@@ -17,6 +18,6 @@ export class AppComponent {
   protected readonly faGoogle = faGoogle;
   protected readonly faTripadvisor = faTripadvisor;
 
-  constructor() {
+  constructor(public router: Router) {
   }
 }

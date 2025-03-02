@@ -1,0 +1,28 @@
+@import "abstracts/variables";
+
+.block-contact-icon {
+  .contact-icon__wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    .contact-icon__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 1rem;
+      fa-icon {
+        display: inline-flex;
+        color: $primary;
+        font-size: 3.2rem;
+      }
+    }
+    .contact-icon__title {
+      margin-bottom: .7rem;
+      text-align: center;
+    }
+    .contact-icon__description {
+      text-align: center;
+    }
+  }
+}

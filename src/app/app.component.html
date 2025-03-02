@@ -7,12 +7,13 @@
 <section class="section-footer mt-md-5">
   <zpg-blog-image
     [imgUrl]="'zg-5.jpg'"
-    [position]="'center'"
-    [isThereATopImage]="true">
+    [backgroundPosition]="'center'"
+    [isThereATopImageBorder]="true">
     <zpg-footer class="w-100"></zpg-footer>
   </zpg-blog-image>
 </section>
-<div class="floating-links-wrapper" appFadeInOut>
+<div class="floating-links-wrapper"
+     appFadeInOut>
   <zpg-floating-link
     class="me-3"
     [url]="'https://www.instagram.com/zuppa_good'"
@@ -29,4 +30,4 @@
     [url]="'https://www.tripadvisor.com/Restaurant_Review-g274967-d25096017-Reviews-Zuppa_Good-Riga_Riga_Region.html'"
     [icon]="faTripadvisor"/>
 </div>
-<zpg-welcome></zpg-welcome>
+<zpg-welcome *ngIf="router.url === '/home'"/>

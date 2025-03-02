@@ -1,0 +1,23 @@
+@import 'abstracts/variables';
+@import 'vendors/bootstrap-variables-override';
+@import 'abstracts/mixins';
+
+.section-menu {
+  .menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    zpg-blog-menu{
+      flex-basis: 50%;
+    }
+  }
+}
+
+@include res('md') {
+  .section-menu {
+    .menu-wrapper {
+      zpg-blog-menu{
+        flex-basis: 100%;
+      }
+    }
+  }
+}

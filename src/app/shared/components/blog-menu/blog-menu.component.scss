@@ -1,0 +1,57 @@
+@import 'abstracts/variables';
+@import 'vendors/bootstrap-variables-override';
+@import 'abstracts/mixins';
+
+.block-blog-menu {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 5rem;
+  .blog-menu__wrapper {
+    width: 12rem;
+    min-width: 12rem;
+    height: 12rem;
+    min-height: 12rem;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 1.5rem;
+    .blog-menu__price {
+      position: absolute;
+      left: 8.3rem;
+      top: 0;
+      min-height: 4.5rem;
+      min-width: 4.5rem;
+      border-radius: 100%;
+      background-color: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  .blog-menu__header-description {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    .wrapper-text {
+      &:nth-child(1) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
+@include res('lg') {
+  .block-blog-menu {
+    .blog-menu__wrapper {
+      width: 10rem;
+      min-width: 10rem;
+      height: 10rem;
+      min-height: 10rem;
+      .blog-menu__price{
+        left: 7rem;
+      }
+    }
+  }
+}

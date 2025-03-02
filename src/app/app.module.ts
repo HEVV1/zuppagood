@@ -12,19 +12,24 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
+import { ContactsComponent } from './features/contacts/contacts.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
+    ContactsComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    CoreModule,
-    SharedModule,
-    FontAwesomeModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        CoreModule,
+        SharedModule,
+        FontAwesomeModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [
     provideClientHydration(),
     CookieService

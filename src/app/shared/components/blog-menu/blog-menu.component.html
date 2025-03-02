@@ -1,0 +1,24 @@
+<div class="block-blog-menu">
+  <div class="blog-menu__wrapper"
+       [ngStyle]="{'background': 'url('+imgUrl+')' + 'no-repeat center center / cover'}">
+    <div class="blog-menu__price">
+      <span class="t-price">{{ price }}</span>
+    </div>
+  </div>
+  <div class="blog-menu__header-description">
+    <div class="wrapper-text">
+      <span class="t-menu-header"
+            appPopup
+            [customClass]="'components-animate-on-scroll'">
+        {{ foodTitle }}
+      </span>
+    </div>
+    <div class="wrapper-text">
+      <span
+        appPopup
+        [customClass]="'components-animate-on-scroll'">
+        {{ foodDescription }}
+      </span>
+    </div>
+  </div>
+</div>

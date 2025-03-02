@@ -5,9 +5,11 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core';
+import {Router} from "@angular/router";
 import {timer} from "rxjs";
 import {CookieService} from "ngx-cookie-service";
 import {ButtonMenuComponent} from "../../components/button-menu/button-menu.component";
+
 
 @Component({
   selector: 'zpg-header',
@@ -22,7 +24,8 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('targetHeaderNav') public targetHeaderNav!: ElementRef;
 
   constructor(private renderer2: Renderer2,
-              private cookieService: CookieService) {
+              private cookieService: CookieService,
+              public router: Router) {
     this.timingMs = this.cookieService.get('hasBeenVisited') ? 0 : 3100;
   }
 

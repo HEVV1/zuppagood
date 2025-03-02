@@ -1,0 +1,53 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "vendors/bootstrap-variables-override";
+
+.section-menu {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  .custom-container {
+    .section-menu-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .section-menu-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-basis: calc(100% / 3);
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+.section-map-form {
+  iframe {
+    width: 100%;
+    height: calc(100% - 7.3rem);
+    border: 0;
+    margin-bottom: 1.5rem;
+  }
+  margin-bottom: 8rem;
+}
+
+@include res('md') {
+  .section-menu {
+    .custom-container {
+      .section-menu-wrapper {
+        .section-menu-item {
+          flex-basis: 100%;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  .section-map-form {
+    iframe {
+      height: 40rem;
+    }
+    margin-bottom: 8rem;
+  }
+}
