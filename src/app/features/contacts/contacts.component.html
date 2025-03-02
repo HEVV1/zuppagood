@@ -44,33 +44,80 @@
 <section class="section-map-form">
   <div class="custom-container">
     <div class="row">
-      <div class="col">
-        map
+      <div class="col-12 col-md-6 mb-5 mb-md-0">
+        <iframe
+          src="https://maps-api-ssl.google.com/maps?hl=en&amp;ll=56.943874,24.114616&amp;output=embed&amp;q=Zuppa+Good+(Centr%C4%81ltirgus+iela+3)&amp;z=16"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0">
+        </iframe>
+        <div class="d-flex d-md-inline-block justify-content-center">
+          <zpg-button
+            [customClass]="'alt-color'"
+            onclick="window.open('https://maps.app.goo.gl/5HThFNHTgVsuWRpo7','_blank');">
+            Get Direction
+          </zpg-button>
+        </div>
       </div>
-      <div class="col">
-        <ng-form>
-          <div class="input-wrapper mb-4">
-            <zpg-flex-text
-              [type]="'text'"
-              [name]="'name'"
-              [placeholder]="'Your Name'"
-            />
+      <div class="col-12 col-md-6 ">
+        <form
+          [formGroup]="formMessage"
+          (ngSubmit)="sendMessage()"
+          autocomplete="off">
+          <div class="wrapper-form-control d-flex flex-column mb-4">
+            <label for="yourNameId"></label>
+            <input
+              type="text"
+              name="yourName"
+              id="yourNameId"
+              formControlName="yourName"
+              placeholder="Your Name"
+            >
+            <span *ngIf="formMessage.get('yourName')?.invalid && formMessage.get('yourName')?.touched"
+                  class="form-control-warning">First name is required!</span>
           </div>
-          <div class="input-wrapper mb-4">
-            <zpg-flex-text
-              [type]="'email'"
-              [name]="'email'"
-              [placeholder]="'Your Email'"
-            />
+          <div class="wrapper-form-control d-flex flex-column mb-4">
+            <label for="yourEmailId"></label>
+            <input
+              type="email"
+              name="yourEmail"
+              id="yourEmailId"
+              formControlName="yourEmail"
+              placeholder="Your Email"
+            >
+            <span *ngIf="formMessage.get('yourEmail')?.invalid && formMessage.get('yourEmail')?.touched"
+                  class="form-control-warning">Email is incorrect!</span>
           </div>
-          <div class="input-wrapper mb-4">
-            <zpg-flex-text
-              [type]="'text'"
-              [name]="'subject'"
-              [placeholder]="'Subject'"
-            />
+          <div class="wrapper-form-control d-flex flex-column mb-4">
+            <label for="subjectId"></label>
+            <input
+              type="text"
+              name="subject"
+              id="subjectId"
+              formControlName="subject"
+              placeholder="Subject"
+            >
+            <span *ngIf="formMessage.get('subject')?.invalid && formMessage.get('subject')?.touched"
+                  class="form-control-warning">Subject is required!</span>
           </div>
-        </ng-form>
+          <div class="wrapper-form-control d-flex flex-column mb-4">
+            <label for="descriptionId"></label>
+            <textarea
+              name="description"
+              id="descriptionId"
+              formControlName="description"
+              placeholder="Your Message"
+            ></textarea>
+            <span *ngIf="formMessage.get('description')?.invalid && formMessage.get('description')?.touched"
+                  class="form-control-warning">Message is required!</span>
+          </div>
+          <zpg-button
+            class="d-flex d-md-inline-block justify-content-center"
+            [customClass]="'alt-color'"
+            type="submit">
+            Send Message
+          </zpg-button>
+        </form>
       </div>
     </div>
   </div>

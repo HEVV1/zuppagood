@@ -23,9 +23,8 @@ import {WelcomeComponent} from './components/welcome/welcome.component';
 // Directive
 import {FadeInOutDirective} from './directives/fade-in-out.directive';
 import {PopupDirective} from './directives/popup.directive';
-import { BlogMenuComponent } from './components/blog-menu/blog-menu.component';
-import { ContactIconComponent } from './components/contact-icon/contact-icon.component';
-import { FlexTextComponent } from './components/inputs/flex-text/flex-text.component';
+import {BlogMenuComponent} from './components/blog-menu/blog-menu.component';
+import {ContactIconComponent} from './components/contact-icon/contact-icon.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { FlexTextComponent } from './components/inputs/flex-text/flex-text.compo
     PopupDirective,
     BlogMenuComponent,
     ContactIconComponent,
-    FlexTextComponent,
   ],
   imports: [
     NgOptimizedImage,
@@ -72,7 +70,6 @@ import { FlexTextComponent } from './components/inputs/flex-text/flex-text.compo
     PopupDirective,
     BlogMenuComponent,
     ContactIconComponent,
-    FlexTextComponent
   ],
 })
 

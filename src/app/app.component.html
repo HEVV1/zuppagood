@@ -30,4 +30,4 @@
     [url]="'https://www.tripadvisor.com/Restaurant_Review-g274967-d25096017-Reviews-Zuppa_Good-Riga_Riga_Region.html'"
     [icon]="faTripadvisor"/>
 </div>
-<zpg-welcome></zpg-welcome>
+<zpg-welcome *ngIf="router.url === '/home'"/>
