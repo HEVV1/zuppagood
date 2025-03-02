@@ -6,8 +6,8 @@ import {Component, Input} from "@angular/core";
   styleUrl: "./blog-image.component.scss",
 })
 export class BlogImageComponent {
-  @Input() public isThereATopImage: boolean | undefined;
-  @Input() public isThereABottomImage: boolean | undefined;
+  @Input() public isThereATopImageBorder: boolean | undefined;
+  @Input() public isThereABottomImageBorder: boolean | undefined;
   @Input() public imgUrl: string | undefined;
-  @Input() public position: string | undefined;
+  @Input() public backgroundPosition: string | undefined;
 }

@@ -1,0 +1,36 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "vendors/bootstrap-variables-override";
+
+.section-menu {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  .custom-container {
+    .section-menu-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .section-menu-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-basis: calc(100% / 3);
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+@include res('md') {
+  .section-menu {
+    .custom-container {
+      .section-menu-wrapper {
+        .section-menu-item{
+          flex-basis: 100%;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

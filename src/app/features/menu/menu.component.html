@@ -1,3 +1,41 @@
-<div>
-  Menu
-</div>
+<section class="section-header-banner">
+  <zpg-blog-image
+    [imgUrl]="'zg-8.jpg'"
+    [backgroundPosition]="'center'"
+    [isThereABottomImageBorder]="true">
+    <div class="wrapper-text text-animation-initial-value mt-50">
+      <span class="t-slogan t-color white t-transform uppercase"
+            appPopup
+            [customClass]="'components-animate-on-scroll'">
+        Menu
+      </span>
+    </div>
+  </zpg-blog-image>
+</section>
+
+<section class="section-menu mt-50">
+  <div class="custom-container">
+    <div class="wrapper-text text-center text-animation-initial-value">
+      <span class="t-slogan"
+            appPopup
+            [customClass]="'components-animate-on-scroll'">
+        Soup in edible cup
+      </span>
+    </div>
+    <div *ngIf="isItRendered$ | async"
+         class="menu-wrapper mt-50">
+      <zpg-blog-menu
+        *ngFor="let item of menuItems"
+        [imgUrl]="item.imgUrl"
+        [price]="item.price"
+        [foodTitle]="item.foodTitle"
+        [foodDescription]="item.foodDescription"
+        #listBlogMenu
+      />
+    </div>
+  </div>
+</section>
+
+<ng-template #loadingMenu>
+  <span>Loading images...</span>
+</ng-template>

@@ -6,57 +6,7 @@
   text-align: justify;
 }
 
-.block__button--primary {
-  color: $primary;
-  position: relative;
-  font-weight: 500;
-  padding: 1.6rem 4.8rem;
-  transition: ease $default_transition_time * 3 all;
-  border: .1rem solid $primary;
-  background-image: linear-gradient(130deg, transparent 0%, transparent 50%, $primary 50%);
-  background-size: 240%;
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-color: rgba($color_white, 1);
-    border-style: solid;
-    transition: all ($default_transition_time * 3) ease;
-    z-index: 1;
-  }
-  &::before {
-    width: 0;
-    height: 100%;
-    border-width: .1rem 0 .1rem 0;
-  }
-  &::after {
-    width: 100%;
-    height: 0;
-    border-width: 0 .1rem 0 .1rem;
-  }
-  &:hover,
-  &:active {
-    color: $color_white;
-    background-position: 100%;
-    border-color: rgba($color_white, 1);
-    &::before {
-      width: 100%;
-      border-width: .1rem 0 .1rem 0;
-    }
-    &::after {
-      height: 100%;
-      border-width: 0 .1rem 0 .1rem;
-    }
-  }
-  &:active {
-    transform: scale(0.9);
-    transition: ease $default_transition_time all !important;
-  }
-}
-
-// TEXT
+// TEXT COLOR
 .t-color {
   &.white {
     color: $color_white;
@@ -69,12 +19,14 @@
   }
 }
 
+//TEXT TRANSFORM
 .t-transform {
   &.uppercase {
     text-transform: uppercase;
   }
 }
 
+//TEXT DECORATION
 .t-decoration {
   &.underline {
     &:hover {
@@ -83,6 +35,7 @@
   }
 }
 
+//TEXT WEIGHT
 .t-weight {
   &.tw-600 {
     font-weight: 600;
@@ -92,7 +45,15 @@
   }
 }
 
-// Animation on scroll - initial value
+//MARGIN
+.mt-35 {
+  margin-top: 3.5rem;
+}
+.mt-50 {
+  margin-top: 5rem;
+}
+
+// Animation on scroll - text initial value
 .text-animation-initial-value {
   &.wrapper-text {
     overflow: hidden;
@@ -102,32 +63,21 @@
     }
   }
 }
-.text-animation-initial-value-opacity {
-  &.wrapper-text {
-    overflow: hidden;
-    span {
-      transition: all 1s ease;
-      opacity: 0;
-    }
-  }
-}
+
+// Animation on scroll - component initial value
 .component-animation-initial-value {
   transition: all 1s ease;
   transform: translateY(3rem);
   opacity: 0;
 }
-.component-animation-initial-value-opacity {
-  transition: all 1s ease;
-  opacity: 0;
-}
 
-// Animation on scroll
+// Animation on scroll - component animate
 .components-animate-on-scroll {
   transform: translateY(0rem) !important;
   opacity: 1 !important;
 }
 
-// Opacity
+// OPACITY
 .opacity-off {
   opacity: 0 !important;
 }
@@ -135,3 +85,7 @@
   opacity: 1 !important;
 }
 
+// TRANSITION
+.transition-1s {
+  transition: all 1s ease;
+}

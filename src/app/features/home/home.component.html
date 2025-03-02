@@ -71,9 +71,9 @@
 <section class="section__interested-in-franchise">
   <zpg-blog-image
     [imgUrl]="'zg-4.jpg'"
-    [position]="'top'"
-    [isThereATopImage]="true"
-    [isThereABottomImage]="true">
+    [backgroundPosition]="'top'"
+    [isThereATopImageBorder]="true"
+    [isThereABottomImageBorder]="true">
     <div class="custom-container">
       <div class="wrapper-text text-center py-4 px-md-4 text-animation-initial-value">
         <span class="t-franchise--header"
@@ -113,7 +113,7 @@
       </span>
     </div>
     <div class="wrapper-menu-carousel py-5">
-      <zpg-carousel-menu class="component-animation-initial-value-opacity"
+      <zpg-carousel-menu class="opacity-off transition-1s"
                          appPopup
                          [customClass]="'opacity-on'">
       </zpg-carousel-menu>

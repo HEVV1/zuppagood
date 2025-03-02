@@ -1,0 +1,77 @@
+<section class="section-header-banner">
+  <zpg-blog-image
+    [imgUrl]="'zg-7.jpg'"
+    [backgroundPosition]="'center'"
+    [isThereABottomImageBorder]="true">
+    <div class="wrapper-text text-animation-initial-value mt-50">
+      <span class="t-slogan t-color white t-transform uppercase"
+            appPopup
+            [customClass]="'components-animate-on-scroll'">
+        Contacts
+      </span>
+    </div>
+  </zpg-blog-image>
+</section>
+
+<section class="section-menu">
+  <div class="custom-container">
+    <div class="section-menu-wrapper">
+      <div class="section-menu-item">
+        <zpg-contact-icon
+          [icon]="faMapMarkedAlt"
+          [title]="'Address'"
+          [description]="'Centraltirgus iela 3 k.2, Riga, Latvia'"
+        />
+      </div>
+      <div class="section-menu-item">
+        <zpg-contact-icon
+          [icon]="faPhone"
+          [title]="'Phone'"
+          [description]="'+371 26089066'"
+        />
+      </div>
+      <div class="section-menu-item">
+        <zpg-contact-icon
+          [icon]="faEnvelope"
+          [title]="'Email'"
+          [description]="'hello@zuppagood.com'"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-map-form">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col">
+        map
+      </div>
+      <div class="col">
+        <ng-form>
+          <div class="input-wrapper mb-4">
+            <zpg-flex-text
+              [type]="'text'"
+              [name]="'name'"
+              [placeholder]="'Your Name'"
+            />
+          </div>
+          <div class="input-wrapper mb-4">
+            <zpg-flex-text
+              [type]="'email'"
+              [name]="'email'"
+              [placeholder]="'Your Email'"
+            />
+          </div>
+          <div class="input-wrapper mb-4">
+            <zpg-flex-text
+              [type]="'text'"
+              [name]="'subject'"
+              [placeholder]="'Subject'"
+            />
+          </div>
+        </ng-form>
+      </div>
+    </div>
+  </div>
+</section>
