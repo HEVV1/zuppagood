@@ -1,0 +1,68 @@
+@import 'abstracts/variables';
+@import 'vendors/bootstrap-variables-override';
+@import 'abstracts/mixins';
+
+.section-financial-terms {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  .wrapper-text {
+    &.changeable {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .t-slogan {
+        font-size: 3.2rem;
+      }
+      .t-franchise--header {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+.section-about-franchise {
+  margin-bottom: 7rem;
+}
+
+.section-franchise-package {
+  margin-bottom: 7rem;
+}
+
+.section-franchise-join {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+
+@include res('lg') {
+  .section-financial-terms {
+    .wrapper-text {
+      &.changeable {
+        .t-slogan {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+@include res('md') {
+  .section-financial-terms {
+    .wrapper-text {
+      &.changeable {
+        .t-slogan {
+          font-size: 2.2rem;
+        }
+        .t-franchise--header {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+  .section-franchise-package{
+    margin-bottom: 2rem;
+  }
+  .section-franchise-join{
+    margin-top: 4rem;
+  }
+}

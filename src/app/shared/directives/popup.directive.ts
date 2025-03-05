@@ -14,12 +14,12 @@ import {CookieService} from "ngx-cookie-service";
 })
 export class PopupDirective implements AfterViewInit {
   @Input() public customClass!: string;
-  public timingMs: number = 0;
+  @Input() public timingMs: number = 0;
 
   constructor(private renderer2: Renderer2,
               private elementRef: ElementRef,
               private cookieService: CookieService) {
-    this.timingMs = cookieService.get('hasBeenVisited') ? 0 : 3100;
+    this.timingMs = cookieService.get('hasBeenVisited') ? this.timingMs : 3100;
   }
 
   public ngAfterViewInit(): void {
