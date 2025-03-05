@@ -10,4 +10,5 @@ import {
 })
 export class ButtonLinkComponent {
   @Input() url: string | undefined;
+  @Input() customClass: string = '';
 }

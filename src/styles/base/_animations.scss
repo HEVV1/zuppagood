@@ -74,3 +74,27 @@
     opacity: 0;
   }
 }
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.animation-numbers-init {
+  transition: --num 2s;
+  counter-set: num var(--num);
+  &::before {
+    content: counter(num);
+    margin-right: 1rem;
+  }
+  &.animated-5000 {
+    --num: 5000;
+  }
+  &.animated-4 {
+    --num: 4;
+  }
+  &.animated-3000 {
+    --num: 3000;
+  }
+}

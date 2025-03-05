@@ -25,6 +25,7 @@ import {FadeInOutDirective} from './directives/fade-in-out.directive';
 import {PopupDirective} from './directives/popup.directive';
 import {BlogMenuComponent} from './components/blog-menu/blog-menu.component';
 import {ContactIconComponent} from './components/contact-icon/contact-icon.component';
+import { PackageFranchiseComponent } from './components/package-franchise/package-franchise.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {ContactIconComponent} from './components/contact-icon/contact-icon.compo
     PopupDirective,
     BlogMenuComponent,
     ContactIconComponent,
+    PackageFranchiseComponent,
   ],
   imports: [
     NgOptimizedImage,
@@ -70,6 +72,7 @@ import {ContactIconComponent} from './components/contact-icon/contact-icon.compo
     PopupDirective,
     BlogMenuComponent,
     ContactIconComponent,
+    PackageFranchiseComponent,
   ],
 })
 
