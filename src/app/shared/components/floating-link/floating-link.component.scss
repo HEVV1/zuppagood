@@ -6,15 +6,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 3rem;
+      height: 3rem;
       font-size: 1.5rem;
-      background-color: var.$primary;
-      color: var.$color_black;
+      background-color: var.$secondary;
+      border: .1rem solid var.$color_white;
+      color: var.$color_white;
       transition: all var.$default_transition_time ease;
+      padding-top: .1rem;
       &:hover {
-        background-color: var.$primary_darker;
-        border: .1rem solid var.$color_black;
+        background-color: var.$primary;
+        border: .1rem solid var.$color_white;
       }
     }
   }

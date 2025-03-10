@@ -1,0 +1,57 @@
+@import 'abstracts/variables';
+@import 'vendors/bootstrap-variables-override';
+@import 'abstracts/mixins';
+
+.block-image-torn {
+  width: 30%;
+  display: inline-flex;
+  justify-content: end;
+  .image-torn__wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .image-torn__border {
+      position: absolute;
+      height: 1.5rem;
+      &.top {
+        width: 100%;
+        background: url("/assets/images/overlay-top.png");
+        left: 0;
+        top: -.1rem;
+      }
+      &.bottom {
+        width: 100%;
+        background: url("/assets/images/overlay-bottom.png");
+        left: 0;
+        bottom: -.1rem;
+      }
+      &.left {
+        width: 150%;
+        background: url("/assets/images/overlay-bottom.png");
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-16.4%) rotateZ(90deg);
+      }
+      &.right {
+        width: 150%;
+        background: url("/assets/images/overlay-top.png");
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(16.4%) rotateZ(90deg);
+      }
+    }
+  }
+}
+
+@include res('xl') {
+  .block-image-torn {
+    width: 50%;
+  }
+}
+
+
+@include res('md') {
+  .block-image-torn {
+    width: 100%;
+  }
+}

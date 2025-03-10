@@ -1,0 +1,11 @@
+<div class="block-image-torn">
+  <div class="image-torn__wrapper">
+    <div *ngIf="top" class="image-torn__border top"></div>
+    <div *ngIf="left" class="image-torn__border left"></div>
+    <div *ngIf="right" class="image-torn__border right"></div>
+    <div *ngIf="bottom" class="image-torn__border bottom"></div>
+    <img src="assets/images/{{imgUrl}}"
+         alt="{{imgUrl}}"
+         loading="lazy">
+  </div>
+</div>

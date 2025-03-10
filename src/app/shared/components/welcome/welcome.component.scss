@@ -19,7 +19,7 @@
       justify-content: center;
       align-items: end;
       position: absolute;
-      background: var.$primary;
+      background: var.$secondary;
       width: 100%;
       min-height: 50vh;
       opacity: 0;
@@ -53,8 +53,6 @@
     }
     .welcome-wrapper-logo {
       position: fixed;
-      //transform: translateY(-50%);
-      //transform: scale(0.9);
       opacity: 0;
       &.showOnStart {
         opacity: 1;

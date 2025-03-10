@@ -1,18 +1,21 @@
 <div class="block-package-franchise">
   <img class="background-package-img"
        [ngClass]="imgReverse ? 'reverse-init' : ''"
-       src="assets/images/textures/background_texture_1.png"
+       src="assets/images/textures/background_texture.png"
        alt="background_texture_1.png"
        loading="lazy"
        appPopup
-       [customClass]="'animate-on-show-reverse'">
+       [customClass]="imgReverse ? 'animate-on-show-reverse' : 'animate-on-show'">
+
   <div class="image-border-line"
        [ngClass]="reverseInitBorder ? 'reverse-init': ''"
        appPopup
        [customClass]="'animate-on-show'"></div>
+
   <div *ngIf="isThereALine" class="connection-line"
        appPopup
        [customClass]="'animate-on-show'"></div>
+
   <div class="wrapper-text text-center">
     <span class="t-slogan component-animation-initial-value-left"
           appPopup

@@ -1,9 +1,13 @@
 <div class="block-blog-image"
-     [ngStyle]="{'background':
-     'linear-gradient(#33211de6, #33211de6), ' +
-     'url(/assets/images/blog-background-images/'+imgUrl+') ' +
-     'no-repeat ' + backgroundPosition + ''}">
+     [ngStyle]="{'background': 'url(/assets/images/blog-background-images/'+imgUrl+') ' + 'no-repeat ' + backgroundPosition + ''}">
+  <div class="blog-image__background-gradient"></div>
   <div *ngIf="isThereATopImageBorder" class="blog-image__top-border"></div>
   <ng-content></ng-content>
   <div *ngIf="isThereABottomImageBorder" class="blog-image__bottom-border"></div>
 </div>
+
+
+<!--[ngStyle]="{'background':-->
+<!--'linear-gradient(#33211de6, #33211de6), ' +-->
+<!--'url(/assets/images/blog-background-images/'+imgUrl+') ' +-->
+<!--'no-repeat ' + backgroundPosition + ''}"-->

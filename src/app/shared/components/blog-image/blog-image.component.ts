@@ -10,4 +10,6 @@ export class BlogImageComponent {
   @Input() public isThereABottomImageBorder: boolean | undefined;
   @Input() public imgUrl: string | undefined;
   @Input() public backgroundPosition: string | undefined;
+
+  public color: string = '#000';
 }

@@ -52,6 +52,9 @@
 .mt-50 {
   margin-top: 5rem;
 }
+.mt-70 {
+  margin-top: 7rem;
+}
 //MARGIN - BOTTOM
 .mb-35 {
   margin-bottom: 3.5rem;
@@ -127,5 +130,23 @@
   display: block;
   width: 100%;
   height: .1rem;
-  background-color: rgba($primary, 0.5);
+  background-color: rgba($secondary, 0.5);
+  transform-origin: center;
+  scale: 0;
+  transition: all $default_transition_time * 6;
+  &.show-line{
+    scale: 1;
+  }
+}
+
+.transition-delay {
+  &.td-0-15 {
+    transition-delay: .0s;
+  }
+  &.td-0-30 {
+    transition-delay: .30s;
+  }
+  &.td-0-45 {
+    transition-delay: .60s;
+  }
 }

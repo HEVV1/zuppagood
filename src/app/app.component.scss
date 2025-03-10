@@ -2,6 +2,12 @@
 @import 'vendors/bootstrap-variables-override';
 @import 'abstracts/mixins';
 
+.section-footer{
+  zpg-footer{
+    z-index: 1;
+  }
+}
+
 .floating-links-wrapper {
   display: flex;
   position: fixed;
