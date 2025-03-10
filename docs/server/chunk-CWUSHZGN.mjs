@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{c as m}from"./chunk-6HEUKLTW.mjs";import"./chunk-L266UGJN.mjs";import{A as e,Db as i,kb as n,u as o}from"./chunk-7ADU5DQ7.mjs";import"./chunk-5XUXGTUW.mjs";var u=[{path:"",component:m}],c=(()=>{class t{static \u0275fac=function(r){return new(r||t)};static \u0275mod=e({type:t});static \u0275inj=o({imports:[i.forChild(u),i]})}return t})();var C=(()=>{class t{static \u0275fac=function(r){return new(r||t)};static \u0275mod=e({type:t});static \u0275inj=o({imports:[n,c]})}return t})();export{C as ContactsModule};

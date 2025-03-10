@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Zuppagood</title>
+  <base href="/zuppagood/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+<link rel="stylesheet" href="styles-AJZDVKAN.css"><style ng-app-id="ng">.section-footer[_ngcontent-ng-c672540238]   zpg-footer[_ngcontent-ng-c672540238]{z-index:1}.floating-links-wrapper[_ngcontent-ng-c672540238]{display:flex;position:fixed;right:2%;bottom:3%;transition:all .45s ease;animation:_ngcontent-ng-c672540238_topAndBottom 1.05s infinite alternate;opacity:0;visibility:hidden;z-index:10}.floating-links-wrapper.comp-fade-in[_ngcontent-ng-c672540238]{opacity:1;visibility:visible}@keyframes _ngcontent-ng-c672540238_topAndBottom{0%{transform:translateY(0)}to{transform:translateY(-1.5rem)}}@media only screen and (max-width: 767px){.floating-links-wrapper[_ngcontent-ng-c672540238]{display:none}}</style><style ng-app-id="ng">.block-header[_ngcontent-ng-c2216031803]{z-index:10;width:100%;position:absolute;top:0;left:0;padding-left:3rem;padding-right:3rem;overflow:hidden}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]{display:flex;justify-content:flex-end;padding-top:2.5rem;padding-bottom:2.5rem}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]{display:flex;justify-content:center;align-items:center}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]   span[_ngcontent-ng-c2216031803]{transition:all .45s ease;opacity:0}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(1)   span[_ngcontent-ng-c2216031803]{transition-delay:.1s}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(2)   span[_ngcontent-ng-c2216031803]{transition-delay:.2s}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(3)   span[_ngcontent-ng-c2216031803]{transition-delay:.3s}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(4)   span[_ngcontent-ng-c2216031803]{transition-delay:.4s}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav[_ngcontent-ng-c2216031803]   .header__desktop-wrapper-nav-ul.header__desktop-wrapper-nav-ul-animate[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]   span[_ngcontent-ng-c2216031803]{opacity:1}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]{width:100%;display:none}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper.animate-menu-links[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]{height:26rem}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper.animate-menu-links[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]   .header__wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(1){transition-delay:.15s;transform:translate(0);opacity:1}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper.animate-menu-links[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]   .header__wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(2){transition-delay:.3s;transform:translate(0);opacity:1}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper.animate-menu-links[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]   .header__wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(3){transition-delay:.45s;transform:translate(0);opacity:1}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper.animate-menu-links[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]   .header__wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]:nth-child(4){transition-delay:.6s;transform:translate(0);opacity:1}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]   .header__mobile-button[_ngcontent-ng-c2216031803]{display:flex;justify-content:end;padding-top:3rem;padding-bottom:3rem}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]{display:flex;width:100%;height:0;transition:all .45s ease}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]{width:100%}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]   .header__mobile-links[_ngcontent-ng-c2216031803]   .header__wrapper-nav[_ngcontent-ng-c2216031803]   .header__wrapper-nav-ul[_ngcontent-ng-c2216031803]   li[_ngcontent-ng-c2216031803]{transition:ease .15s all;transform:translate(-100%);opacity:0}@media only screen and (max-width: 767px){.block-header[_ngcontent-ng-c2216031803]{position:relative;top:unset;left:unset;background:#2d3e48;display:flex;justify-content:end;align-items:end;flex-flow:column;padding-left:2rem;padding-right:2rem}.block-header[_ngcontent-ng-c2216031803]   .header__desktop-wrapper[_ngcontent-ng-c2216031803]{display:none}.block-header[_ngcontent-ng-c2216031803]   .header__mobile-wrapper[_ngcontent-ng-c2216031803]{display:block}}</style><style ng-app-id="ng">.block-blog-image[_ngcontent-ng-c2078641940]{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-height:40rem;padding:4rem 0;background-size:cover!important}.block-blog-image[_ngcontent-ng-c2078641940]   .blog-image__background-gradient[_ngcontent-ng-c2078641940]{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(#2d3e48cc,#2d3e48)}.block-blog-image[_ngcontent-ng-c2078641940]   .blog-image__top-border[_ngcontent-ng-c2078641940]{display:block;width:100%;height:1.5rem;position:absolute;top:-.2rem;left:0;background:url(/assets/images/overlay-top.png)}.block-blog-image[_ngcontent-ng-c2078641940]   .blog-image__bottom-border[_ngcontent-ng-c2078641940]{display:block;width:100%;height:1.5rem;position:absolute;bottom:-.2rem;left:0;background:url(/assets/images/overlay-bottom.png)}</style><style ng-app-id="ng">.block-footer[_ngcontent-ng-c2535259258]   .footer__bottom[_ngcontent-ng-c2535259258]{margin-top:4.8rem;border-top:.1rem solid rgba(255,255,255,.1)}.block-footer[_ngcontent-ng-c2535259258]   .footer__bottom[_ngcontent-ng-c2535259258]   .wrapper-text[_ngcontent-ng-c2535259258]{margin-top:4rem}</style><style ng-app-id="ng">.block-floating-link[_ngcontent-ng-c3194517456]   .floating-link__wrapper[_ngcontent-ng-c3194517456]   a[_ngcontent-ng-c3194517456]{display:flex;justify-content:center;align-items:center;width:3rem;height:3rem;font-size:1.5rem;background-color:#2d3e48;border:.1rem solid #FFFFFF;color:#fff;transition:all .15s ease;padding-top:.1rem}.block-floating-link[_ngcontent-ng-c3194517456]   .floating-link__wrapper[_ngcontent-ng-c3194517456]   a[_ngcontent-ng-c3194517456]:hover{background-color:#f60;border:.1rem solid #FFFFFF}</style><style ng-app-id="ng">@keyframes _ngcontent-ng-c2568281155_up-rotate{0%{animation-timing-function:cubic-bezier(.16,-.88,.97,.53);transform:translateY(0)}30%{transform-origin:center;animation-timing-function:cubic-bezier(.34,1.56,.64,1);transform:translateY(-1rem)}to{transform-origin:center;transform:translateY(-1rem) rotate(45deg) scale(.9)}}@keyframes _ngcontent-ng-c2568281155_up-rotate-reverse{0%{transform-origin:center;transform:translateY(-1rem) rotate(45deg) scale(.9)}30%{transform-origin:center;animation-timing-function:cubic-bezier(.34,1.56,.64,1);transform:translateY(-1rem)}to{animation-timing-function:cubic-bezier(.16,-.88,.97,.53);transform:translateY(0)}}@keyframes _ngcontent-ng-c2568281155_down-rotate{0%{animation-timing-function:cubic-bezier(.16,-.88,.97,.53);transform:translateY(0)}30%{transform-origin:center;animation-timing-function:cubic-bezier(.34,1.56,.64,1);transform:translateY(1rem)}to{transform-origin:center;transform:translateY(1rem) rotate(-45deg) scale(.9)}}@keyframes _ngcontent-ng-c2568281155_down-rotate-reverse{0%{transform-origin:center;transform:translateY(1rem) rotate(-45deg) scale(.9)}30%{transform-origin:center;animation-timing-function:cubic-bezier(.34,1.56,.64,1);transform:translateY(1rem)}to{animation-timing-function:cubic-bezier(.16,-.88,.97,.53);transform:translateY(0)}}@keyframes _ngcontent-ng-c2568281155_hide{29%{opacity:1}30%{opacity:0}to{opacity:0}}@property --num{syntax: "<integer>"; initial-value: 0; inherits: false;}.animation-numbers-init[_ngcontent-ng-c2568281155]{transition:--num 2s;counter-set:num var(--num)}.animation-numbers-init[_ngcontent-ng-c2568281155]:before{content:counter(num);margin-right:1rem}.animation-numbers-init.animated-5000[_ngcontent-ng-c2568281155]{--num: 5000}.animation-numbers-init.animated-4[_ngcontent-ng-c2568281155]{--num: 4}.animation-numbers-init.animated-3000[_ngcontent-ng-c2568281155]{--num: 3000}.block-menu-button[_ngcontent-ng-c2568281155]{width:5.6rem;height:4rem;display:flex;justify-content:center;align-items:center;border:.1rem solid rgba(255,255,255,.1);cursor:pointer;transition:all .15s ease}.block-menu-button[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]{position:relative;width:3rem}.block-menu-button[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line[_ngcontent-ng-c2568281155]{position:absolute;top:0;left:0;width:100%;height:.1rem;transition:all .15s ease;background:#fff6}.block-menu-button[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--1[_ngcontent-ng-c2568281155]{top:-1rem}.block-menu-button[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--2[_ngcontent-ng-c2568281155]{transform:scale(1)}.block-menu-button[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--3[_ngcontent-ng-c2568281155]{top:1rem}.block-menu-button[_ngcontent-ng-c2568281155]:hover{border-color:#fffc}.block-menu-button[_ngcontent-ng-c2568281155]:hover   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line[_ngcontent-ng-c2568281155]{background:#fffc}.block-menu-button.animation-on[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--1[_ngcontent-ng-c2568281155]{animation:_ngcontent-ng-c2568281155_down-rotate .6s both}.block-menu-button.animation-on[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--2[_ngcontent-ng-c2568281155]{transform:scale(0);transform-origin:center}.block-menu-button.animation-on[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--3[_ngcontent-ng-c2568281155]{animation:_ngcontent-ng-c2568281155_up-rotate .6s both}.block-menu-button.animation-reverse[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--1[_ngcontent-ng-c2568281155]{animation:_ngcontent-ng-c2568281155_down-rotate-reverse .6s both}.block-menu-button.animation-reverse[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--2[_ngcontent-ng-c2568281155]{transform:scale(1);transform-origin:center}.block-menu-button.animation-reverse[_ngcontent-ng-c2568281155]   .menu-button__label-lines[_ngcontent-ng-c2568281155]   .menu-button__label-single-line.line--3[_ngcontent-ng-c2568281155]{animation:_ngcontent-ng-c2568281155_up-rotate-reverse .6s both}</style><style ng-app-id="ng">.block-square-icon[_ngcontent-ng-c3882884652]   .square-icon__wrapper[_ngcontent-ng-c3882884652]   a[_ngcontent-ng-c3882884652]{display:flex;justify-content:center;align-items:center;width:4.5rem;height:4.5rem;border:.2rem solid #FFFFFF;transition:ease .15s all}.block-square-icon[_ngcontent-ng-c3882884652]   .square-icon__wrapper[_ngcontent-ng-c3882884652]   a[_ngcontent-ng-c3882884652]:hover{border-color:#f60;background:#fff}.block-square-icon[_ngcontent-ng-c3882884652]   .square-icon__wrapper[_ngcontent-ng-c3882884652]   a[_ngcontent-ng-c3882884652]:hover   fa-icon[_ngcontent-ng-c3882884652]{color:#f60}.block-square-icon[_ngcontent-ng-c3882884652]   .square-icon__wrapper[_ngcontent-ng-c3882884652]   a[_ngcontent-ng-c3882884652]   fa-icon[_ngcontent-ng-c3882884652]{display:flex;color:#fff;font-size:2rem}</style><style ng-app-id="ng">.section-menu[_ngcontent-ng-c171228361]   .menu-wrapper[_ngcontent-ng-c171228361]{display:flex;flex-wrap:wrap}.section-menu[_ngcontent-ng-c171228361]   .menu-wrapper[_ngcontent-ng-c171228361]   zpg-blog-menu[_ngcontent-ng-c171228361]{flex-basis:50%}@media only screen and (max-width: 767px){.section-menu[_ngcontent-ng-c171228361]   .menu-wrapper[_ngcontent-ng-c171228361]   zpg-blog-menu[_ngcontent-ng-c171228361]{flex-basis:100%}}</style></head>
+<body><!--nghm-->
+  <zpg-app-root _nghost-ng-c672540238="" ng-version="18.2.13" ngh="4" ng-server-context="ssg"><div _ngcontent-ng-c672540238="" class="app-root-header-content"><section _ngcontent-ng-c672540238="" class="section-header"><zpg-header _ngcontent-ng-c672540238="" _nghost-ng-c2216031803="" ngh="0"><div _ngcontent-ng-c2216031803="" class="block-header"><div _ngcontent-ng-c2216031803="" class="header__desktop-wrapper"><nav _ngcontent-ng-c2216031803="" class="header__desktop-wrapper-nav"><ul _ngcontent-ng-c2216031803="" class="header__desktop-wrapper-nav-ul"><li _ngcontent-ng-c2216031803="" class="t-menu desktop"><span _ngcontent-ng-c2216031803=""><a _ngcontent-ng-c2216031803="" href="/home"> Home </a></span></li><li _ngcontent-ng-c2216031803="" class="t-menu desktop"><span _ngcontent-ng-c2216031803=""><a _ngcontent-ng-c2216031803="" href="/menu" class="active-link"> Menu </a></span></li><li _ngcontent-ng-c2216031803="" class="t-menu desktop"><span _ngcontent-ng-c2216031803=""><a _ngcontent-ng-c2216031803="" href="/franchise"> Franchise </a></span></li><li _ngcontent-ng-c2216031803="" class="t-menu desktop"><span _ngcontent-ng-c2216031803=""><a _ngcontent-ng-c2216031803="" href="/contacts"> Contacts </a></span></li></ul></nav></div><div _ngcontent-ng-c2216031803="" class="header__mobile-wrapper"><div _ngcontent-ng-c2216031803="" class="header__mobile-button"><zpg-button-menu _ngcontent-ng-c2216031803="" class="d-flex" _nghost-ng-c2568281155="" ngh="0"><div _ngcontent-ng-c2568281155="" class="block-menu-button"><div _ngcontent-ng-c2568281155="" class="menu-button__label-lines"><div _ngcontent-ng-c2568281155="" class="menu-button__label-single-line line--1"></div><div _ngcontent-ng-c2568281155="" class="menu-button__label-single-line line--2"></div><div _ngcontent-ng-c2568281155="" class="menu-button__label-single-line line--3"></div></div></div></zpg-button-menu></div><div _ngcontent-ng-c2216031803="" class="header__mobile-links"><nav _ngcontent-ng-c2216031803="" class="header__wrapper-nav"><ul _ngcontent-ng-c2216031803="" class="header__wrapper-nav-ul"><li _ngcontent-ng-c2216031803="" class="t-menu"><a _ngcontent-ng-c2216031803="" href="/home">Home</a></li><li _ngcontent-ng-c2216031803="" class="t-menu"><a _ngcontent-ng-c2216031803="" href="/menu" class="active-link">Menu</a></li><li _ngcontent-ng-c2216031803="" class="t-menu"><a _ngcontent-ng-c2216031803="" href="/franchise">Franchise</a></li><li _ngcontent-ng-c2216031803="" class="t-menu"><a _ngcontent-ng-c2216031803="" href="/contacts">Contacts</a></li></ul></nav></div></div></div></zpg-header></section><router-outlet _ngcontent-ng-c672540238=""></router-outlet><zpg-menu _nghost-ng-c171228361="" ngh="2"><section _ngcontent-ng-c171228361="" class="section-header-banner"><zpg-blog-image _ngcontent-ng-c171228361="" _nghost-ng-c2078641940="" ngh="1"><div _ngcontent-ng-c2078641940="" class="block-blog-image" style="background: url(/assets/images/blog-background-images/zg-8.jpg) no-repeat center;"><div _ngcontent-ng-c2078641940="" class="blog-image__background-gradient"></div><!----><div _ngcontent-ng-c171228361="" class="wrapper-text text-animation-initial-value mt-50"><span _ngcontent-ng-c171228361="" apppopup="" class="t-slogan t-color white t-transform uppercase"> Menu </span></div><div _ngcontent-ng-c2078641940="" class="blog-image__bottom-border"></div><!----></div></zpg-blog-image></section><section _ngcontent-ng-c171228361="" class="section-menu mt-50"><div _ngcontent-ng-c171228361="" class="custom-container"><div _ngcontent-ng-c171228361="" class="wrapper-text text-center text-animation-initial-value"><span _ngcontent-ng-c171228361="" apppopup="" class="t-slogan"> Soup in edible cup </span></div><!----></div></section><!----></zpg-menu><!----></div><section _ngcontent-ng-c672540238="" class="section-footer mt-md-5"><zpg-blog-image _ngcontent-ng-c672540238="" _nghost-ng-c2078641940="" ngh="3"><div _ngcontent-ng-c2078641940="" class="block-blog-image" style="background: url(/assets/images/blog-background-images/zg-5.jpg) no-repeat center;"><div _ngcontent-ng-c2078641940="" class="blog-image__background-gradient"></div><div _ngcontent-ng-c2078641940="" class="blog-image__top-border"></div><!----><zpg-footer _ngcontent-ng-c672540238="" class="w-100" _nghost-ng-c2535259258="" ngh="0"><div _ngcontent-ng-c2535259258="" class="block-footer"><div _ngcontent-ng-c2535259258="" class="custom-container"><div _ngcontent-ng-c2535259258="" apppopup="" class="row component-animation-initial-value"><div _ngcontent-ng-c2535259258="" class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0"><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-2 mb-md-4 mb-lg-5"><span _ngcontent-ng-c2535259258="" class="t-footer--head">get in touch</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-1 mb-md-2 mb-lg-4"><a _ngcontent-ng-c2535259258="" target="_blank" href="https://maps.app.goo.gl/5HThFNHTgVsuWRpo7" class="t-color white t-decoration underline">Centraltirgus iela 3 k.2, Riga, Latvia</a></div><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-1 mb-md-2 mb-lg-4"><span _ngcontent-ng-c2535259258="" class="t-color white">+371 26089066</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text"><span _ngcontent-ng-c2535259258="" class="t-color white">hello@zuppagood.com</span></div></div><div _ngcontent-ng-c2535259258="" class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0"><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-2 mb-md-4 mb-lg-5"><span _ngcontent-ng-c2535259258="" class="t-footer--head">follow us</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-1 mb-md-2 mb-lg-4"><span _ngcontent-ng-c2535259258="" class="t-color white">Follow us on social media</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-icons d-flex"><zpg-square-icon _ngcontent-ng-c2535259258="" class="me-3" _nghost-ng-c3882884652="" ngh="0"><div _ngcontent-ng-c3882884652="" class="block-square-icon"><div _ngcontent-ng-c3882884652="" class="square-icon__wrapper"><a _ngcontent-ng-c3882884652="" target="_blank" href="https://www.instagram.com/zuppa_good"><fa-icon _ngcontent-ng-c3882884652="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></fa-icon></a></div></div></zpg-square-icon><zpg-square-icon _ngcontent-ng-c2535259258="" class="me-3" _nghost-ng-c3882884652="" ngh="0"><div _ngcontent-ng-c3882884652="" class="block-square-icon"><div _ngcontent-ng-c3882884652="" class="square-icon__wrapper"><a _ngcontent-ng-c3882884652="" target="_blank" href="https://www.facebook.com/zuppagood"><fa-icon _ngcontent-ng-c3882884652="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></fa-icon></a></div></div></zpg-square-icon><zpg-square-icon _ngcontent-ng-c2535259258="" class="me-3" _nghost-ng-c3882884652="" ngh="0"><div _ngcontent-ng-c3882884652="" class="block-square-icon"><div _ngcontent-ng-c3882884652="" class="square-icon__wrapper"><a _ngcontent-ng-c3882884652="" target="_blank" href="https://maps.app.goo.gl/5HThFNHTgVsuWRpo7"><fa-icon _ngcontent-ng-c3882884652="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></fa-icon></a></div></div></zpg-square-icon><zpg-square-icon _ngcontent-ng-c2535259258="" class="me-3" _nghost-ng-c3882884652="" ngh="0"><div _ngcontent-ng-c3882884652="" class="block-square-icon"><div _ngcontent-ng-c3882884652="" class="square-icon__wrapper"><a _ngcontent-ng-c3882884652="" target="_blank" href="https://www.tripadvisor.com/Restaurant_Review-g274967-d25096017-Reviews-Zuppa_Good-Riga_Riga_Region.html"><fa-icon _ngcontent-ng-c3882884652="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tripadvisor" class="svg-inline--fa fa-tripadvisor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M166.4 280.521c0 13.236-10.73 23.966-23.966 23.966s-23.966-10.73-23.966-23.966 10.73-23.966 23.966-23.966 23.966 10.729 23.966 23.966zm264.962-23.956c-13.23 0-23.956 10.725-23.956 23.956 0 13.23 10.725 23.956 23.956 23.956 13.23 0 23.956-10.725 23.956-23.956-.001-13.231-10.726-23.956-23.956-23.956zm89.388 139.49c-62.667 49.104-153.276 38.109-202.379-24.559l-30.979 46.325-30.683-45.939c-48.277 60.39-135.622 71.891-197.885 26.055-64.058-47.158-77.759-137.316-30.601-201.374A186.762 186.762 0 0 0 0 139.416l90.286-.05a358.48 358.48 0 0 1 197.065-54.03 350.382 350.382 0 0 1 192.181 53.349l96.218.074a185.713 185.713 0 0 0-28.352 57.649c46.793 62.747 34.964 151.37-26.648 199.647zM259.366 281.761c-.007-63.557-51.535-115.075-115.092-115.068C80.717 166.7 29.2 218.228 29.206 281.785c.007 63.557 51.535 115.075 115.092 115.068 63.513-.075 114.984-51.539 115.068-115.052v-.04zm28.591-10.455c5.433-73.44 65.51-130.884 139.12-133.022a339.146 339.146 0 0 0-139.727-27.812 356.31 356.31 0 0 0-140.164 27.253c74.344 1.582 135.299 59.424 140.771 133.581zm251.706-28.767c-21.992-59.634-88.162-90.148-147.795-68.157-59.634 21.992-90.148 88.162-68.157 147.795v.032c22.038 59.607 88.198 90.091 147.827 68.113 59.615-22.004 90.113-88.162 68.125-147.783zm-326.039 37.975v.115c-.057 39.328-31.986 71.163-71.314 71.106-39.328-.057-71.163-31.986-71.106-71.314.057-39.328 31.986-71.163 71.314-71.106 39.259.116 71.042 31.94 71.106 71.199zm-24.512 0v-.084c-.051-25.784-20.994-46.645-46.778-46.594-25.784.051-46.645 20.994-46.594 46.777.051 25.784 20.994 46.645 46.777 46.594 25.726-.113 46.537-20.968 46.595-46.693zm313.423 0v.048c-.02 39.328-31.918 71.194-71.247 71.173s-71.194-31.918-71.173-71.247c.02-39.328 31.918-71.194 71.247-71.173 39.29.066 71.121 31.909 71.173 71.199zm-24.504-.008c-.009-25.784-20.918-46.679-46.702-46.67-25.784.009-46.679 20.918-46.67 46.702.009 25.784 20.918 46.678 46.702 46.67 25.765-.046 46.636-20.928 46.67-46.693v-.009z"></path></svg></fa-icon></a></div></div></zpg-square-icon></div></div><div _ngcontent-ng-c2535259258="" class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0"><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-2 mb-md-4 mb-lg-5"><span _ngcontent-ng-c2535259258="" class="t-footer--head">opening hours</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text"><span _ngcontent-ng-c2535259258="" class="t-color white t-transform uppercase d-block mb-2">Monday - Sunday</span><span _ngcontent-ng-c2535259258="" class="t-color white t-transform uppercase d-block">10:00 - 17:00</span></div></div><div _ngcontent-ng-c2535259258="" class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0"><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-2 mb-md-4 mb-lg-5"><span _ngcontent-ng-c2535259258="" class="t-footer--head">delivery</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text mb-1 mb-md-2 mb-lg-4"><span _ngcontent-ng-c2535259258="" class="t-color white t-transform uppercase d-block mb-2">Monday - Sunday</span><span _ngcontent-ng-c2535259258="" class="t-color white t-transform uppercase d-block">10:00 - 17:00</span></div><div _ngcontent-ng-c2535259258="" class="wrapper-text"><span _ngcontent-ng-c2535259258="" class="t-color white t-transform">Available at BOLT and Wolt</span></div></div></div></div><div _ngcontent-ng-c2535259258="" class="footer__bottom"><div _ngcontent-ng-c2535259258="" class="wrapper-text text-center"><div _ngcontent-ng-c2535259258="" class="custom-container"><span _ngcontent-ng-c2535259258="" class="t-color white">Copyright © </span><a _ngcontent-ng-c2535259258="" href="/public" class="t-decoration underline t-color primary t-weight tw-600">Zuppa Good.</a><span _ngcontent-ng-c2535259258="" class="t-color white"> All Rights Reserved.</span></div></div></div></div></zpg-footer><!----></div></zpg-blog-image></section><div _ngcontent-ng-c672540238="" appfadeinout="" class="floating-links-wrapper"><zpg-floating-link _ngcontent-ng-c672540238="" class="me-3" _nghost-ng-c3194517456="" ngh="0"><div _ngcontent-ng-c3194517456="" class="block-floating-link"><div _ngcontent-ng-c3194517456="" class="floating-link__wrapper"><a _ngcontent-ng-c3194517456="" target="_blank" href="https://www.instagram.com/zuppa_good"><fa-icon _ngcontent-ng-c3194517456="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></fa-icon></a></div></div></zpg-floating-link><zpg-floating-link _ngcontent-ng-c672540238="" class="me-3" _nghost-ng-c3194517456="" ngh="0"><div _ngcontent-ng-c3194517456="" class="block-floating-link"><div _ngcontent-ng-c3194517456="" class="floating-link__wrapper"><a _ngcontent-ng-c3194517456="" target="_blank" href="https://www.facebook.com/zuppagood"><fa-icon _ngcontent-ng-c3194517456="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></fa-icon></a></div></div></zpg-floating-link><zpg-floating-link _ngcontent-ng-c672540238="" class="me-3" _nghost-ng-c3194517456="" ngh="0"><div _ngcontent-ng-c3194517456="" class="block-floating-link"><div _ngcontent-ng-c3194517456="" class="floating-link__wrapper"><a _ngcontent-ng-c3194517456="" target="_blank" href="https://maps.app.goo.gl/5HThFNHTgVsuWRpo7"><fa-icon _ngcontent-ng-c3194517456="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></fa-icon></a></div></div></zpg-floating-link><zpg-floating-link _ngcontent-ng-c672540238="" _nghost-ng-c3194517456="" ngh="0"><div _ngcontent-ng-c3194517456="" class="block-floating-link"><div _ngcontent-ng-c3194517456="" class="floating-link__wrapper"><a _ngcontent-ng-c3194517456="" target="_blank" href="https://www.tripadvisor.com/Restaurant_Review-g274967-d25096017-Reviews-Zuppa_Good-Riga_Riga_Region.html"><fa-icon _ngcontent-ng-c3194517456="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tripadvisor" class="svg-inline--fa fa-tripadvisor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M166.4 280.521c0 13.236-10.73 23.966-23.966 23.966s-23.966-10.73-23.966-23.966 10.73-23.966 23.966-23.966 23.966 10.729 23.966 23.966zm264.962-23.956c-13.23 0-23.956 10.725-23.956 23.956 0 13.23 10.725 23.956 23.956 23.956 13.23 0 23.956-10.725 23.956-23.956-.001-13.231-10.726-23.956-23.956-23.956zm89.388 139.49c-62.667 49.104-153.276 38.109-202.379-24.559l-30.979 46.325-30.683-45.939c-48.277 60.39-135.622 71.891-197.885 26.055-64.058-47.158-77.759-137.316-30.601-201.374A186.762 186.762 0 0 0 0 139.416l90.286-.05a358.48 358.48 0 0 1 197.065-54.03 350.382 350.382 0 0 1 192.181 53.349l96.218.074a185.713 185.713 0 0 0-28.352 57.649c46.793 62.747 34.964 151.37-26.648 199.647zM259.366 281.761c-.007-63.557-51.535-115.075-115.092-115.068C80.717 166.7 29.2 218.228 29.206 281.785c.007 63.557 51.535 115.075 115.092 115.068 63.513-.075 114.984-51.539 115.068-115.052v-.04zm28.591-10.455c5.433-73.44 65.51-130.884 139.12-133.022a339.146 339.146 0 0 0-139.727-27.812 356.31 356.31 0 0 0-140.164 27.253c74.344 1.582 135.299 59.424 140.771 133.581zm251.706-28.767c-21.992-59.634-88.162-90.148-147.795-68.157-59.634 21.992-90.148 88.162-68.157 147.795v.032c22.038 59.607 88.198 90.091 147.827 68.113 59.615-22.004 90.113-88.162 68.125-147.783zm-326.039 37.975v.115c-.057 39.328-31.986 71.163-71.314 71.106-39.328-.057-71.163-31.986-71.106-71.314.057-39.328 31.986-71.163 71.314-71.106 39.259.116 71.042 31.94 71.106 71.199zm-24.512 0v-.084c-.051-25.784-20.994-46.645-46.778-46.594-25.784.051-46.645 20.994-46.594 46.777.051 25.784 20.994 46.645 46.777 46.594 25.726-.113 46.537-20.968 46.595-46.693zm313.423 0v.048c-.02 39.328-31.918 71.194-71.247 71.173s-71.194-31.918-71.173-71.247c.02-39.328 31.918-71.194 71.247-71.173 39.29.066 71.121 31.909 71.173 71.199zm-24.504-.008c-.009-25.784-20.918-46.679-46.702-46.67-25.784.009-46.679 20.918-46.67 46.702.009 25.784 20.918 46.678 46.702 46.67 25.765-.046 46.636-20.928 46.67-46.693v-.009z"></path></svg></fa-icon></a></div></div></zpg-floating-link></div><!----></zpg-app-root>
+<link rel="modulepreload" href="chunk-QRROHUJU.js"><link rel="modulepreload" href="chunk-UF5GH2CV.js"><link rel="modulepreload" href="chunk-2A7AHN5D.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-EEEIPNC3.js" defer=""></script><script src="main-SHGF3L3L.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"2":"t0","4":"t1"},"c":{"2":[],"4":[{"i":"t1","r":1}]},"n":{"4":"0fn3"}},{"n":{"2":"1f2n2"},"t":{"10":"t2","12":"t3"},"c":{"10":[],"12":[]}},{"t":{"2":"t0","4":"t1"},"c":{"2":[{"i":"t0","r":1}],"4":[]},"n":{"4":"0fn4"}},{"c":{"3":[{"i":"c171228361","r":1}],"12":[]},"n":{"6":"5f2n3"},"t":{"12":"t4"}}]}</script></body></html>
