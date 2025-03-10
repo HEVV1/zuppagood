@@ -1,31 +1,33 @@
 .block__button--primary {
-  color: $primary;
+  color: $color_white;
   position: relative;
   font-weight: 500;
   padding: 1.6rem 4.8rem;
   transition: ease $default_transition_time * 3 all;
-  border: .1rem solid $primary;
-  background-image: linear-gradient(130deg, transparent 0%, transparent 50%, $primary 50%);
+  border: .1rem solid $color_white;
+  background-image: linear-gradient(130deg, transparent 0%, transparent 50%, $color_white 50%);
   background-size: 240%;
   &.alt-color {
     font-weight: 600;
-    background-image: linear-gradient(130deg, $color_white 0%, $color_white 50%, $primary 50%);
+    border: .1rem solid $primary;
+    color: $primary;
+    background-image: linear-gradient(130deg, $color_white 0%, $color_white 50%, $secondary 50%);
     &::before,
     &::after {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      border-color: rgba($secondary, 0.6);
+      border-color: rgba($color_white, 1);
       border-style: solid;
       transition: all ($default_transition_time * 3) ease;
       z-index: 1;
     }
     &:hover,
     &:active {
-      color: $secondary;
+      color: $color_white;
       background-position: 100%;
-      border-color: rgba($secondary, 0.6);
+      border-color: rgba($color_white, 1);
       &::before {
         width: 100%;
         border-width: .1rem 0 .1rem 0;
@@ -43,7 +45,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-color: rgba($color_white, 1);
+    border-color: rgba($primary, 1);
     border-style: solid;
     transition: all ($default_transition_time * 3) ease;
     z-index: 1;
@@ -60,9 +62,9 @@
   }
   &:hover,
   &:active {
-    color: $color_white;
+    color: $primary;
     background-position: 100%;
-    border-color: rgba($color_white, 1);
+    border-color: rgba($primary, 1);
     &::before {
       width: 100%;
       border-width: .1rem 0 .1rem 0;
@@ -72,8 +74,8 @@
       border-width: 0 .1rem 0 .1rem;
     }
   }
-  &:active {
-    transform: scale(0.9);
+  &:active, {
+    transform: scale(0.9) !important;
     transition: ease $default_transition_time all !important;
   }
   &:disabled {

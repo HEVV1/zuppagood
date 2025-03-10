@@ -2,7 +2,7 @@
   .owl-dot {
     zoom: 2 !important;
     span {
-      background: $primary !important;
+      background: $secondary !important;
       transition: ease $default_transition_time all !important;
     }
     &.active {

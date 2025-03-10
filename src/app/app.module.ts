@@ -10,7 +10,6 @@ import {CookieService} from "ngx-cookie-service";
 import {AppComponent} from './app.component';
 // Modules
 import {AppRoutingModule} from './app-routing.module';
-import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
 import {ContactsComponent} from './features/contacts/contacts.component';
 import {
@@ -27,7 +26,6 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CoreModule,
     SharedModule,
     FontAwesomeModule,
     FormsModule,

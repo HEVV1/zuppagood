@@ -52,10 +52,10 @@
     //ON MENU BUTTON CLICK
     &.animate-menu-links {
       .header__mobile-links {
-        height: 20rem;
+        height: 26rem;
         .header__wrapper-nav {
           .header__wrapper-nav-ul {
-            @for $i from 1 through 3 {
+            @for $i from 1 through 4 {
               li:nth-child(#{$i}) {
                 transition-delay: 0 + $i * 0.15s;
                 transform: translateX(0);

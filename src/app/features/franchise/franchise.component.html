@@ -1,6 +1,6 @@
 <section class="section-header-banner">
   <zpg-blog-image
-    [imgUrl]="'zg-5.jpg'"
+    [imgUrl]="'zg-9.jpg'"
     [backgroundPosition]="'center'"
     [isThereABottomImageBorder]="true">
     <div class="wrapper-text text-animation-initial-value mt-50">
@@ -11,6 +11,80 @@
       </span>
     </div>
   </zpg-blog-image>
+</section>
+
+<div class="custom-container mt-70">
+  <div class="line"
+       appPopup
+       [customClass]="'show-line'"></div>
+</div>
+
+
+<section class="section-concept">
+  <div class="block-concept">
+    <div class="concept__wrapper">
+      <div class="concept__header wrapper-text text-animation-initial-value">
+        <span class="t-slogan"
+              appPopup
+              [customClass]="'components-animate-on-scroll'">
+          Concept
+        </span>
+      </div>
+
+      <div class="concept__main-text">
+        <div class="wrapper-text text-animation-initial-value">
+          <span class="t-franchise--content"
+                appPopup
+                [customClass]="'components-animate-on-scroll'">
+                  At Zuppa Good, we've transformed
+                  fast food by offering a unique
+                  blend of exceptional taste and
+                  environmental responsibility.
+          </span>
+        </div>
+        <div class="wrapper-text mt-5 text-animation-initial-value">
+          <span class="t-franchise--content"
+                appPopup
+                [customClass]="'components-animate-on-scroll'">
+                  Our dining experience delivers
+                  <span class="t-color primary t-weight tw-700"
+                        appPopup
+                        [customClass]="'components-animate-on-scroll'">
+                    restaurant-quality soups
+                  </span> in
+            edible cups:
+          </span>
+        </div>
+      </div>
+
+      <div class="concept__checkmarks">
+        <div class="wrapper-ic_text component-animation-initial-value-left transition-1s transition-delay td-0-15"
+             appPopup
+             [customClass]="'components-animate-on-scroll'">
+          <img src="assets/images/icons/ic_checkmark.svg" alt="ic_checkmark.svg">
+          <span class="t-franchise--content">Quick</span>
+        </div>
+        <div class="wrapper-ic_text component-animation-initial-value-left transition-1s transition-delay td-0-30"
+             appPopup
+             [customClass]="'components-animate-on-scroll'">
+          <img src="assets/images/icons/ic_checkmark.svg" alt="ic_checkmark.svg">
+          <span class="t-franchise--content">Convenient</span>
+        </div>
+        <div class="wrapper-ic_text component-animation-initial-value-left transition-1s transition-delay td-0-45"
+             appPopup
+             [customClass]="'components-animate-on-scroll'">
+          <img src="assets/images/icons/ic_checkmark.svg" alt="ic_checkmark.svg">
+          <span class="t-franchise--content">Eco-friendly</span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-concept-img">
+      <zpg-image-torn
+        class="d-flex justify-content-end"
+        [imgUrl]="'img-torn-0.jpg'">
+      </zpg-image-torn>
+    </div>
+  </div>
 </section>
 
 <section class="section-financial-terms">
@@ -33,12 +107,12 @@
             </span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-franchise--header animation-numbers-init"
+            <span class="t-franchise--header t-color secondary animation-numbers-init"
                   appPopup
                   [customClass]="'animated-3000'">EUR</span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-color primary t-box-shadow bs-1 opacity-off transition-1s"
+            <span class="t-color secondary t-box-shadow bs-1 opacity-off transition-1s"
                   appPopup
                   [customClass]="'opacity-on'">
               Onboarding, training, and setup support
@@ -54,12 +128,12 @@
             </span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-franchise--header animation-numbers-init"
+            <span class="t-franchise--header t-color secondary animation-numbers-init"
                   appPopup
                   [customClass]="'animated-4'">%</span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-color primary t-box-shadow bs-1 opacity-off transition-1s"
+            <span class="t-color secondary t-box-shadow bs-1 opacity-off transition-1s"
                   appPopup
                   [customClass]="'opacity-on'">
               Revenue
@@ -75,12 +149,12 @@
             </span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-franchise--header animation-numbers-init"
+            <span class="t-franchise--header t-color secondary animation-numbers-init"
                   appPopup
                   [customClass]="'animated-5000'">EUR</span>
           </div>
           <div class="wrapper-text changeable text-center">
-            <span class="t-color primary t-box-shadow bs-1 opacity-off transition-1s"
+            <span class="t-color secondary t-box-shadow bs-1 opacity-off transition-1s"
                   appPopup
                   [customClass]="'opacity-on'">
               One-time cost for unique cup baking equipment
@@ -94,7 +168,7 @@
 
 <section class="section-about-franchise">
   <zpg-blog-image
-    [imgUrl]="'zg-1.jpg'"
+    [imgUrl]="'zg-5.jpg'"
     [backgroundPosition]="'center'"
     [isThereATopImageBorder]="true"
     [isThereABottomImageBorder]="true">
@@ -163,7 +237,9 @@
 </section>
 
 <div class="custom-container">
-  <div class="line"></div>
+  <div class="line"
+       appPopup
+       [customClass]="'show-line'"></div>
 </div>
 
 <section class="section-franchise-join">

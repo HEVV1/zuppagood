@@ -2,34 +2,34 @@
   <div class="header__desktop-wrapper">
     <nav class="header__desktop-wrapper-nav">
       <ul class="header__desktop-wrapper-nav-ul" #targetHeaderNav>
-        <li *ngIf="router.url !== '/home'"
-            class="t-menu desktop">
+        <li class="t-menu desktop">
           <span>
-            <a href="/home">
+            <a [class]="router.url === '/home' ? 'active-link' : ''"
+               href="/home">
               Home
             </a>
           </span>
         </li>
-        <li *ngIf="router.url !== '/menu'"
-            class="t-menu desktop">
+        <li class="t-menu desktop">
           <span>
-            <a href="/menu">
+            <a [class]="router.url === '/menu' ? 'active-link' : ''"
+               href="/menu">
               Menu
             </a>
           </span>
         </li>
-        <li *ngIf="router.url !== '/franchise'"
-            class="t-menu desktop">
+        <li class="t-menu desktop">
           <span>
-            <a href="/franchise">
+            <a [class]="router.url === '/franchise' ? 'active-link' : ''"
+               href="/franchise">
               Franchise
             </a>
           </span>
         </li>
-        <li *ngIf="router.url !== '/contacts'"
-            class="t-menu desktop">
+        <li class="t-menu desktop">
           <span>
-            <a href="/contacts">
+            <a [class]="router.url === '/contacts' ? 'active-link' : ''"
+               href="/contacts">
               Contacts
             </a>
           </span>
@@ -49,21 +49,21 @@
     <div class="header__mobile-links">
       <nav class="header__wrapper-nav">
         <ul class="header__wrapper-nav-ul">
-          <li *ngIf="router.url !== '/home'"
-              class="t-menu">
-            <a href="/home">Home</a>
+          <li class="t-menu">
+            <a [class]="router.url === '/home' ? 'active-link' : ''"
+               href="/home">Home</a>
           </li>
-          <li *ngIf="router.url !== '/menu'"
-              class="t-menu">
-            <a href="/menu">Menu</a>
+          <li class="t-menu">
+            <a [class]="router.url === '/menu' ? 'active-link' : ''"
+               href="/menu">Menu</a>
           </li>
-          <li *ngIf="router.url !== '/franchise'"
-              class="t-menu">
-            <a href="/franchise">Franchise</a>
+          <li class="t-menu">
+            <a [class]="router.url === '/franchise' ? 'active-link' : ''"
+               href="/franchise">Franchise</a>
           </li>
-          <li *ngIf="router.url !== '/contacts'"
-              class="t-menu">
-            <a href="/contacts">Contacts</a>
+          <li class="t-menu">
+            <a [class]="router.url === '/contacts' ? 'active-link' : ''"
+               href="/contacts">Contacts</a>
           </li>
         </ul>
       </nav>
