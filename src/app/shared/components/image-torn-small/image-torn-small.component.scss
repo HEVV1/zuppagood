@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+
+.block-image-torn-small {
+  display: inline-block;
+  .image-torn-small__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 25rem;
+    height: 25rem;
+    transition: all $default_transition_time * 3;
+    .image-torn-small__border {
+      position: absolute;
+      height: 1.5rem;
+      width: 100%;
+      &.top {
+        background: url("/assets/images/overlay-top.png");
+        top: -.1rem;
+        left: 0;
+      }
+      &.bottom {
+        background: url("/assets/images/overlay-bottom.png");
+        bottom: -.1rem;
+        left: 0;
+      }
+      &.left {
+        background: url("/assets/images/overlay-bottom.png");
+        top: 50%;
+        left: -48%;
+        transform: translateY(-50%) rotateZ(90deg);
+      }
+      &.right {
+        background: url("/assets/images/overlay-top.png");
+        top: 50%;
+        right: -48%;
+        transform: translateY(-50%) rotateZ(90deg);
+      }
+    }
+    &:hover {
+      transform: scale(1.2);
+      z-index: 1;
+    }
+  }
+}

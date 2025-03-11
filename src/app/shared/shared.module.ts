@@ -27,6 +27,7 @@ import {BlogMenuComponent} from './components/blog-menu/blog-menu.component';
 import {ContactIconComponent} from './components/contact-icon/contact-icon.component';
 import { PackageFranchiseComponent } from './components/package-franchise/package-franchise.component';
 import { ImageTornComponent } from './components/image-torn/image-torn.component';
+import { ImageTornSmallComponent } from './components/image-torn-small/image-torn-small.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ImageTornComponent } from './components/image-torn/image-torn.component
     ContactIconComponent,
     PackageFranchiseComponent,
     ImageTornComponent,
+    ImageTornSmallComponent,
   ],
   imports: [
     NgOptimizedImage,
@@ -58,25 +60,26 @@ import { ImageTornComponent } from './components/image-torn/image-torn.component
     NgClass,
   ],
   providers: [],
-    exports: [
-        BlogImageComponent,
-        ButtonComponent,
-        ButtonLinkComponent,
-        CarouselMenuComponent,
-        CarouselMainComponents,
-        SquareIconComponent,
-        ButtonMenuComponent,
-        HeaderComponent,
-        FooterComponent,
-        FloatingLinkComponent,
-        FadeInOutDirective,
-        WelcomeComponent,
-        PopupDirective,
-        BlogMenuComponent,
-        ContactIconComponent,
-        PackageFranchiseComponent,
-        ImageTornComponent,
-    ],
+  exports: [
+    BlogImageComponent,
+    ButtonComponent,
+    ButtonLinkComponent,
+    CarouselMenuComponent,
+    CarouselMainComponents,
+    SquareIconComponent,
+    ButtonMenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    FloatingLinkComponent,
+    FadeInOutDirective,
+    WelcomeComponent,
+    PopupDirective,
+    BlogMenuComponent,
+    ContactIconComponent,
+    PackageFranchiseComponent,
+    ImageTornComponent,
+    ImageTornSmallComponent,
+  ],
 })
 
 export class SharedModule {
