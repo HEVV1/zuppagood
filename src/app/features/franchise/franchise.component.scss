@@ -66,6 +66,79 @@
 
 .section-about-franchise {
   margin-bottom: 7rem;
+  .about-franchise__wrapper {
+    .about_franchise__wrapper-content {
+
+    }
+  }
+}
+
+.section-edible-cups {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  .edible-cups__wrapper {
+    min-height: 80vh;
+    display: flex;
+    .edible-cups__left-side {
+      flex-basis: 60%;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      .edible-cups__all-texts {
+        .wrapper-text {
+          margin-bottom: 2rem;
+        }
+        .wrapper-text-content {
+          padding-right: 2rem;
+          margin-bottom: 1rem;
+          span {
+            font-size: 2.1rem;
+          }
+        }
+      }
+      .edible-cups__vertical-line {
+        background: $secondary;
+        min-width: .5rem;
+        max-width: .5rem;
+        height: 100%;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: all $default_transition_time * 12;
+      }
+    }
+    .edible-cups__right-side {
+      position: relative;
+      flex-basis: 40%;
+      width: 100%;
+      .edible-cups__each-element-holder {
+        position: absolute;
+        &.element-1 {
+          left: 40%;
+          top: 0;
+        }
+        &.element-2 {
+          left: 2%;
+          top: 20%;
+        }
+        &.element-3 {
+          left: 40%;
+          top: 40%;
+        }
+        &.element-4 {
+          left: 2%;
+          top: 60%;
+        }
+        &.element-5 {
+          left: 40%;
+          top: 75%;
+        }
+      }
+      .edible-cups__all-texts{
+        display: none;
+      }
+    }
+  }
 }
 
 
@@ -145,6 +218,41 @@
       }
     }
   }
+
+  .section-edible-cups {
+
+    .edible-cups__wrapper {
+
+      .edible-cups__left-side {
+        flex-basis: 40%;
+        max-width: 40%;
+        align-items: start;
+        .edible-cups__all-texts {
+          .wrapper-text {
+            padding-right: 0;
+            width: 100%;
+            span {
+              font-size: 6rem;
+            }
+          }
+          .wrapper-text-content {
+            span {
+
+            }
+          }
+        }
+        .edible-cups__vertical-line {
+        }
+      }
+
+      .edible-cups__right-side {
+        flex-basis: 60%;
+        max-width: 60%;
+        .edible-cups__each-element-holder {
+        }
+      }
+    }
+  }
 }
 
 @include res('md') {
@@ -170,7 +278,7 @@
         bottom: unset;
         height: 100%;
         transform: translateX(-50%);
-        background: linear-gradient(to bottom, rgba($secondary, .6), rgba($secondary, 1));
+        background: linear-gradient(to bottom, rgba($secondary, .6), rgba($secondary, .9));
         .concept__header {
           position: unset;
           left: unset;
@@ -208,5 +316,45 @@
   }
   .section-franchise-join {
     margin-top: 4rem;
+  }
+
+  .section-edible-cups {
+    .edible-cups__wrapper {
+      min-height: auto;
+      .edible-cups__left-side {
+        align-items: center;
+        width: 100%;
+        .edible-cups__all-texts {
+          width: 100%;
+          .wrapper-text {
+            padding-right: 0;
+            width: 100%;
+            span {
+              font-size: 3rem;
+            }
+          }
+          .wrapper-text-content {
+            display: none;
+          }
+        }
+        .edible-cups__vertical-line {
+        }
+      }
+      .edible-cups__right-side {
+        .edible-cups__each-element-holder {
+          display: none;
+        }
+        .edible-cups__all-texts {
+          display: block;
+          .wrapper-text-content {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            span{
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
