@@ -30,14 +30,14 @@
         background: url("/assets/images/overlay-bottom.png");
         right: 0;
         top: 50%;
-        transform: translateY(-50%) translateX(-16.4%) rotateZ(90deg);
+        transform: translateY(-50%) translateX(-16.1%) rotateZ(90deg);
       }
       &.right {
         width: 150%;
         background: url("/assets/images/overlay-top.png");
         left: 0;
         top: 50%;
-        transform: translateY(-50%) translateX(16.4%) rotateZ(90deg);
+        transform: translateY(-50%) translateX(16.1%) rotateZ(90deg);
       }
     }
   }
@@ -53,5 +53,15 @@
 @include res('md') {
   .block-image-torn {
     width: 100%;
+    .image-torn__wrapper {
+      .image-torn__border {
+        &.left {
+          display: none;
+        }
+        &.right {
+          display: none;
+        }
+      }
+    }
   }
 }
