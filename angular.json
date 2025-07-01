@@ -50,7 +50,7 @@
               "discoverRoutes": false
             },
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             },
             "stylePreprocessorOptions": {
               "includePaths": [

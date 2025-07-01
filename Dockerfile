@@ -1,15 +1,10 @@
-FROM node:20-alpine
-
-RUN apk add --no-cache yarn
-
+# Stage 1: build & prune deps
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-COPY ./package.json ./
-
-RUN yarn install
-
+# install devs+prod deps, build SSR, then drop dev deps
+COPY package.json package-lock.json
+RUN npm ci
 COPY . .
-
-EXPOSE 4200
-
-CMD ["npm", "start"]
+RUN npm run build
+RUN npm prune --production
