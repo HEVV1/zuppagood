@@ -30,4 +30,4 @@ WORKDIR /app
 EXPOSE 80 443
 
 # launch SSR + nginx in foreground
-CMD ["sh","-c","node", "dist/zuppagood/server/main.server.mjs & nginx -g 'daemon off;'"]
+CMD ["sh","-c","node dist/zuppagood/server/main.server.mjs & nginx -g 'daemon off;'"]
