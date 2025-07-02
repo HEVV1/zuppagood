@@ -10,6 +10,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 4000
+EXPOSE 4200
 
 CMD ["node", "dist/zuppagood/server/main.server.mjs"]
